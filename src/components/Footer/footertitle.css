@@ -1,0 +1,52 @@
+/* Conteneur du titre */
+.footer-title {
+    position: relative;               /* ⬅️ relative, pas absolute */
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    overflow: hidden;
+    margin-top: auto;                 /* ⬅️ pousse en bas via flex */
+    padding: 0 0.5rem;                /* ⬅️ marge de sécurité */
+}
+
+.footer-title h1 {
+    position: relative;
+    line-height: 0.9;                 /* ⬅️ un peu plus serré */
+    color: #f4efe7;
+    margin: 0;
+    padding: 0;
+}
+
+.ftChar {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+
+.ftChar > span {
+    display: inline-block;
+    will-change: transform;
+}
+
+/* Le ® */
+.footer-title h1 sub {
+    font-size: 0.4em;                 /* ⬅️ plus petit */
+    vertical-align: super;
+    line-height: 0;
+    margin-left: 0.05em;
+}
+
+/* =====================
+   MOBILE
+   ===================== */
+@media (max-width: 768px) {
+    .footer-title {
+        padding: 0 0.25rem;
+        margin-top: auto;
+        margin-bottom: 0;
+    }
+
+    .footer-title h1 {
+        line-height: 1;
+    }
+}

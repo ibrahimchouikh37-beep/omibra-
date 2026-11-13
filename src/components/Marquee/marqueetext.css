@@ -1,0 +1,57 @@
+/* =====================
+   MARQUEE TEXT
+   ===================== */
+.marquee-text-container {
+  --marquee-gap: 3vw;
+
+  width: 100%;
+  overflow: hidden;
+  padding: 3vw 0;
+}
+
+/* Piste : largeur = somme des items (jamais écrasée par le parent) */
+.marquee-text-move {
+  display: flex;
+  width: max-content;
+  will-change: transform; /* GSAP gère le transform */
+}
+
+/* Un item = une période de boucle.
+   L'espace est en padding (et non en gap) pour qu'il soit compté dans la largeur
+   mesurée par le JS → pas de saut ni de trou à la jonction. */
+.marquee-text-marquee {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  padding-right: var(--marquee-gap);
+}
+
+/* <p> au lieu de <h1> : un seul vrai titre par page */
+.marquee-text-title {
+  margin: 0;
+  color: #f4efe7;
+  font-size: min(11vw, 11rem); /* plafonné sur très grands écrans */
+  font-weight: 500;
+  line-height: 1.15; /* évite de rogner les jambages */
+  white-space: nowrap;
+}
+
+.star-rotate {
+  display: inline-block;
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+/* =====================
+   MOBILE
+   ===================== */
+@media (max-width: 768px) {
+  .marquee-text-container {
+    --marquee-gap: 6vw;
+    padding: 6vw 0;
+  }
+
+  .marquee-text-title {
+    font-size: 16vw;
+  }
+}

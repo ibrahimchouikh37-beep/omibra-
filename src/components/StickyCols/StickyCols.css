@@ -1,0 +1,327 @@
+/* =====================
+   TOKENS
+   ===================== */
+.sticky-cols {
+  --bg: #181717;
+  --cream: #f4efe7;
+  --sand: #b1a696;
+  --muted: #524e4b;
+  --accent: #aaa091;
+  --ink: #181717;
+
+  /* Taille des panneaux texte / image (desktop = côte à côte) */
+  --pad: clamp(1.25rem, 4vw, 3.5rem);
+
+  position: relative;
+  width: 100%;
+  height: 100vh; /* fallback */
+  height: 100svh; /* stable : ne bouge pas avec la barre d'URL mobile */
+  background-color: var(--bg);
+  overflow: hidden;
+}
+
+.sticky-cols-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Évite le flash des panneaux avant que GSAP ne positionne tout */
+@media (prefers-reduced-motion: no-preference) {
+  .sticky-cols:not(.is-ready) .col-2,
+  .sticky-cols:not(.is-ready) .col-3,
+  .sticky-cols:not(.is-ready) .col-4 {
+    visibility: hidden;
+  }
+}
+
+/* =====================
+   COLONNES (desktop)
+   ===================== */
+.col {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  will-change: transform, opacity;
+}
+
+/* COL 1 — intro, plein écran, thème sombre */
+.col-1 {
+  z-index: 1;
+  background-color: var(--bg);
+  padding: var(--pad);
+  padding-left: max(var(--pad), env(safe-area-inset-left));
+  padding-right: max(var(--pad), env(safe-area-inset-right));
+}
+
+/* COL 2 — images plein écran, visibles derrière les panneaux */
+.col-2 {
+  z-index: 2;
+  display: block;
+  pointer-events: none;
+}
+
+/* COL 3 — panneau texte clair : moitié gauche */
+.col-3 {
+  z-index: 3;
+  display: block;
+  inset: 0 auto 0 0;
+  width: 50%;
+  background-color: var(--cream);
+  overflow: hidden;
+}
+
+/* COL 4 — image finale : moitié droite */
+.col-4 {
+  z-index: 4;
+  display: block;
+  inset: 0 0 0 auto;
+  width: 50%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* =====================
+   MEDIA
+   ===================== */
+.media {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  will-change: transform;
+}
+
+.media-b {
+  z-index: 1;
+}
+
+/* =====================
+   TEXTE
+   ===================== */
+.text-layer {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: var(--pad);
+}
+
+.panel {
+  --title-color: var(--cream);
+  --text-color: var(--sand);
+  --pill-line: var(--muted);
+  --pill-active: var(--accent);
+
+  width: 100%;
+  max-width: 38rem;
+}
+
+.theme-light .panel {
+  --title-color: var(--ink);
+  --text-color: #5d574f;
+  --pill-line: #c4baab;
+  --pill-active: var(--ink);
+}
+
+.panel-title {
+  margin: 0;
+  color: var(--title-color);
+  font-size: clamp(1.5rem, 0.9rem + 2.2vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.panel-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(1rem, 2vw, 1.75rem);
+  margin-top: clamp(1rem, 2.5vh, 1.75rem);
+}
+
+.panel-text {
+  margin: 0;
+  max-width: 34ch;
+  color: var(--text-color);
+  font-size: clamp(0.875rem, 0.8rem + 0.2vw, 1rem);
+  font-weight: 500;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+/* Lignes générées par SplitText (+ masque) */
+.line {
+  display: block;
+}
+
+/* =====================
+   COMPTEURS
+   ===================== */
+.counters {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex-shrink: 0;
+}
+
+.counter {
+  min-width: 2rem;
+  padding: 0.2rem 0.7rem;
+  border: 1px solid var(--pill-line);
+  border-radius: 999px;
+  color: var(--pill-line);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.counter.is-active {
+  color: var(--pill-active);
+  border-color: var(--pill-active);
+}
+
+/* =====================
+   TABLETTE / MOBILE — layout empilé (≤ 900px)
+   Image en haut, texte en bas
+   ===================== */
+@media (max-width: 900px) {
+  .col-3 {
+    inset: auto 0 0 0;
+    width: 100%;
+    height: 52%;
+  }
+
+  .col-4 {
+    inset: 0 0 auto 0;
+    width: 100%;
+    height: 48%;
+  }
+
+  .text-layer {
+    padding: 1.25rem max(1.25rem, env(safe-area-inset-right))
+      max(1.25rem, env(safe-area-inset-bottom))
+      max(1.25rem, env(safe-area-inset-left));
+  }
+
+  .panel {
+    max-width: 34rem;
+  }
+
+  .panel-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .panel-text {
+    max-width: 100%;
+  }
+
+  .col-1 {
+    text-align: left;
+  }
+}
+
+/* =====================
+   PETIT MOBILE
+   ===================== */
+@media (max-width: 480px) {
+  .panel-title {
+    font-size: clamp(1.3rem, 6vw, 1.6rem);
+    line-height: 1.2;
+  }
+
+  .panel-text {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .counter {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.6rem;
+  }
+}
+
+/* =====================
+   PAYSAGE COURT (téléphone en landscape)
+   ===================== */
+@media (max-height: 480px) and (min-width: 600px) {
+  .panel-title {
+    font-size: clamp(1.1rem, 4vh, 1.5rem);
+  }
+
+  .panel-meta {
+    margin-top: 0.75rem;
+  }
+
+  .panel-text {
+    font-size: 0.8125rem;
+    line-height: 1.4;
+  }
+}
+
+/* =====================
+   ACCESSIBILITÉ — mouvement réduit
+   Pas de pin ni d'animation : sections empilées, tout est lisible
+   ===================== */
+@media (prefers-reduced-motion: reduce) {
+  .sticky-cols,
+  .sticky-cols-wrapper {
+    height: auto;
+    overflow: visible;
+  }
+
+  .col,
+  .col-3,
+  .col-4 {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .col-1,
+  .col-3 {
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+  }
+
+  .col-2,
+  .col-4 {
+    min-height: 0;
+  }
+
+  .col-2 .media-a,
+  .col-4 .media {
+    position: relative;
+    height: 70svh;
+  }
+
+  .media-b {
+    display: none;
+  }
+
+  .text-layer {
+    position: relative;
+    min-height: 60svh;
+  }
+
+  .counter {
+    transition: none;
+  }
+}

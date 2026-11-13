@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
+
+:root {
+	--base-100: #181717;
+	--base-200: #292725;
+	--base-300: #f5f5f5;
+}
+
+html,
+body {
+	background-color: #181717;
+	font-family: "Inter", sans-serif;
+	scroll-behavior: smooth;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	width: 100%;
+	max-width: none;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+/* =====================
+   Glassmorphism card effect
+   ===================== */
+.glassEffect {
+	-webkit-backdrop-filter: blur(5px) saturate(100%);
+	backdrop-filter: blur(5px) saturate(100%);
+	background-color: rgba(237, 240, 245, 0.2);
+	border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.hero-bg-img {
+	background-image: url("./assets/cap1.png");
+	background-repeat: no-repeat;
+	object-fit: cover;
+}
+
+/* =====================
+   WELCOME Section
+   ===================== */
+.text-darkBrown {
+	position: relative;          /* ⬅️ parent de référence */
+	display: block;              /* ⬅️ block, pas inline-block */
+	color: #2a2725;              /* texte noir = caché sur fond noir */
+	overflow: hidden;
+	line-height: 1.05;
+	width: 100%;
+}
+
+.clip-text-welcome {
+	position: absolute;          /* ⬅️ superposé au texte noir */
+	top: 0;
+	left: 0;
+	width: 100%;                 /* ⬅️ FORCE */
+	height: 100%;                /* ⬅️ FORCE */
+	display: block;              /* ⬅️ block */
+	color: #f4efe7;
+	clip-path: inset(0 0 100% 0);
+	white-space: normal;         /* ⬅️ NORMAL, pas nowrap → wrap mobile */
+	transition: none;
+	pointer-events: none;
+	will-change: clip-path;
+}
+
+@media (max-width: 768px) {
+	.responsive-mobile {
+		position: absolute;
+		top: 33%;
+	}
+}
+
+/* =====================
+   CHOOSE Section
+   ===================== */
+.choose-section {
+	background: linear-gradient(
+		to bottom,
+		#181717 0%,
+		#181717 50%,
+		#1f1d1b 65%,
+		#1f1d1b 75%,
+		#1f1d1b 85%,
+		#1f1d1b 90%,
+		#2b2825 100%
+	);
+}
+
+.choose-heading {
+	position: relative;          /* ⬅️ parent de référence */
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.choose-title-break {
+	position: relative;
+	display: block;              /* ⬅️ block */
+	overflow: hidden;
+	color: #181717;              /* noir = invisible sur fond noir */
+	line-height: 1;
+	pointer-events: none;
+}
+
+.choose-title-clip {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;                 /* ⬅️ FORCE */
+	height: 100%;                /* ⬅️ FORCE */
+	display: block;
+	color: #f4efe7;
+	white-space: normal;         /* ⬅️ normal */
+	clip-path: inset(100% 0 0 0);
+	transition: none;
+	z-index: 10;
+	pointer-events: none;
+	will-change: clip-path;
+}
+
+.title-part {
+	overflow: hidden;
+}
+
+/* =====================
+   Preloader mobile
+   ===================== */
+@media (max-width: 800px) {
+	.preloader-progress-bar {
+		left: 0%;
+		width: 100%;
+		transform: translateX(0%) scale(0);
+	}
+
+	.preloader-logo .logo-text {
+		font-size: 2rem;
+	}
+
+	.preloader-mask {
+		mask:
+			linear-gradient(var(--base-300), var(--base-300)),
+			url("./../public/preloader-bg.svg") center/90% no-repeat;
+		-webkit-mask-composite: source-out;
+		mask-composite: subtract;
+	}
+
+	.preloader-footer {
+		width: 75%;
+	}
+}

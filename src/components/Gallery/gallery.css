@@ -1,0 +1,211 @@
+/* =========================
+   BASE — desktop par défaut
+   ========================= */
+
+.gallery-page4 {
+    position: relative;
+    height: 115dvh;               /* ⬅️ dvh au lieu de vh */
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #2b2825;
+    transition: background-color 0.3s ease;
+}
+
+.gallery-page4 .gallery-slider {
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+}
+
+.gallery-slider .gallery-box {
+    position: relative;
+    min-width: calc(50rem * 5);
+    height: 15rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.gallery-slider .gallery-box h3 {
+    font-size: 10rem;
+    width: 50rem;
+    position: absolute;
+    color: #f4efe7;
+    font-weight: 600;
+    left: 100%;
+    animation: gallery-animate var(--time) linear infinite;
+    animation-delay: calc((var(--time) / var(--quantity) * (var(--index) - 1)) - var(--time));
+}
+
+@keyframes gallery-animate {
+    to { left: -50rem; }
+}
+
+/* --- Capsule centrale --- */
+.gallery-page4 .gallery-background {
+    position: absolute;
+    width: 40rem;
+    height: 18rem;
+    border-radius: 90px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.gallery-background img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-page4 .gallery-background img {
+    transform: scale(1.3);
+}
+
+/* --- Panneaux cachés --- */
+.gallery-page4 .gallery-background2 {
+    position: absolute;
+    width: calc(100vw - 1rem);
+    height: calc(100dvh - 1rem);
+    border-radius: 3.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    overflow: hidden;
+}
+
+.gallery-background2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.3);
+}
+
+/* --- Textes --- */
+.gallery-topText,
+.gallery-bottomText {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f4efe7;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.gallery-bottomText {
+    top: 92%;
+}
+
+.gallery-topText h4,
+.gallery-topText h3,
+.gallery-bottomText h4,
+.gallery-bottomText h3 {
+    position: relative;
+    z-index: 10;
+}
+
+.gallery-topText h4 { font-size: 5rem; font-weight: 400; }
+.gallery-topText h3 { font-size: 3rem; }
+.gallery-bottomText h3 {
+    width: 100%;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+}
+
+/* =========================
+   MOBILE — <= 768px
+   ========================= */
+@media (max-width: 768px) {
+
+    .gallery-page4 {
+        height: 100dvh;
+        padding: 0.5rem;
+    }
+
+    /* Le marquee : on réduit drastiquement les dimensions */
+    .gallery-slider .gallery-box {
+        min-width: calc(12rem * 6);    /* ⬅️ 72rem au lieu de 250rem */
+        height: 6rem;
+        gap: 1rem;
+    }
+
+    .gallery-slider .gallery-box h3 {
+        font-size: 3.2rem;             /* ⬅️ 3.2rem au lieu de 10rem */
+        width: 12rem;
+    }
+
+    @keyframes gallery-animate {
+        to { left: -12rem; }
+    }
+
+    /* Capsule centrale : taille raisonnable */
+    .gallery-page4 .gallery-background {
+        width: calc(100vw - 2rem);
+        height: 24rem;                 /* ⬅️ 384px, plus 640px */
+        border-radius: 2rem;
+    }
+
+    /* Panneaux #2 / #3 */
+    .gallery-page4 .gallery-background2 {
+        width: calc(100vw - 1rem);
+        height: calc(100dvh - 1rem);
+        border-radius: 2rem;
+    }
+
+    /* Textes : échelle mobile */
+    .gallery-topText {
+        top: 12%;
+        padding: 0 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+
+    .gallery-topText h4 {
+        font-size: 1.6rem;             /* ⬅️ 25px au lieu de 80px */
+    }
+
+    .gallery-topText h3 {
+        font-size: 0.9rem;             /* ⬅️ 14px au lieu de 48px */
+        opacity: 0.7;
+    }
+
+    .gallery-bottomText {
+        top: auto;
+        bottom: 1.5rem;
+        left: 0;
+        transform: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 0 1rem;
+    }
+
+    .gallery-bottomText h3 {
+        font-size: 0.7rem;
+        line-height: 1.3;
+        margin-left: 0.5rem;
+    }
+
+    .gallery-bottomText svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    /* Bordure et padding intérieurs moins agressifs */
+    .gallery-page4 .gallery-background,
+    .gallery-page4 .gallery-background2 {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
