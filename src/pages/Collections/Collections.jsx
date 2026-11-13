@@ -21,81 +21,81 @@ const Collections = () => {
   // 6 collections
   const collections = [
     {
-      id: "classic",
-      name: "Classic Capsule®",
-      category: "classic",
-      tag: "Refined",
+      id: "ambre",
+      name: "Ambre Omibra®",
+      category: "ambre",
+      tag: "Boisé",
       image: col1,
       description:
-        "The original capsule — refined aesthetics, modern interior, and an intimate retreat in the desert.",
+        "Un sillage chaleureux d'ambre et de bois précieux, enveloppant et intemporel.",
       items: 1,
       year: "2022",
     },
     {
-      id: "terrace",
-      name: "Terrace Capsule®",
-      category: "terrace",
-      tag: "Panoramic",
+      id: "floral",
+      name: "Floral Omibra®",
+      category: "floral",
+      tag: "Floral",
       image: col2,
       description:
-        "A spacious terrace overlooking the dunes. Wake up to the sunrise from your private deck.",
+        "Un bouquet délicat de fleurs blanches et de musc, lumineux et profondément féminin.",
       items: 1,
       year: "2023",
     },
     {
-      id: "desert",
-      name: "Desert Capsule®",
-      category: "desert",
-      tag: "Isolated",
+      id: "oud",
+      name: "Oud Omibra®",
+      category: "oud",
+      tag: "Oriental",
       image: col3,
       description:
-        "The most secluded capsule, built for total immersion in the silence of the desert.",
+        "Une signature intense d'oud et d'épices rares, pour une présence magnétique et mystérieuse.",
       items: 1,
       year: "2023",
     },
     {
-      id: "interior",
-      name: "Interior Collection",
-      category: "interior",
-      tag: "Design",
+      id: "coffret",
+      name: "Coffret Découverte",
+      category: "coffret",
+      tag: "Coffret",
       image: col4,
       description:
-        "Handcrafted furniture, warm textiles, and a minimal palette inspired by the desert.",
-      items: 12,
+        "Trois échantillons de nos créations signature, pour trouver votre parfum.",
+      items: 3,
       year: "2024",
     },
     {
-      id: "exterior",
-      name: "Exterior Collection",
-      category: "exterior",
-      tag: "Architecture",
+      id: "recharge",
+      name: "Recharge Omibra®",
+      category: "recharge",
+      tag: "Éco-responsable",
       image: col5,
       description:
-        "Sculptural forms that blend into the landscape — glass, wood, and steel in dialogue.",
-      items: 8,
+        "Rechargez votre flacon avec nos formules concentrées, dans un geste respectueux de l'environnement.",
+      items: 3,
       year: "2024",
     },
     {
-      id: "experience",
-      name: "Experiences",
-      category: "experience",
-      tag: "Immersive",
+      id: "bougie",
+      name: "Bougies parfumées",
+      category: "bougie",
+      tag: "Maison",
       image: col6,
       description:
-        "Curated moments — sunrise hikes, stargazing dinners, and silent desert walks.",
-      items: 24,
+        "Prolongez l'expérience Omibra® chez vous avec nos bougies aux notes signature.",
+      items: 4,
       year: "2025",
     },
   ];
 
   const filters = [
-    { key: "all", label: "All" },
-    { key: "classic", label: "Classic" },
-    { key: "terrace", label: "Terrace" },
-    { key: "desert", label: "Desert" },
-    { key: "interior", label: "Interior" },
-    { key: "exterior", label: "Exterior" },
-    { key: "experience", label: "Experiences" },
+    { key: "all", label: "Tout" },
+    { key: "ambre", label: "Ambre" },
+    { key: "floral", label: "Floral" },
+    { key: "oud", label: "Oud" },
+    { key: "coffret", label: "Coffrets" },
+    { key: "recharge", label: "Recharges" },
+    { key: "bougie", label: "Bougies" },
   ];
 
   const filtered = useMemo(
@@ -173,14 +173,15 @@ const Collections = () => {
             Collections
           </p>
           <h1 className="text-[#f4efe7] text-[3rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[8rem] leading-[0.95] font-medium tracking-tighter">
-            Our
+            Nos
             <br />
             Collections
           </h1>
           <p className="mt-6 md:mt-8 text-[#b1a696] text-sm md:text-base max-w-2xl leading-relaxed">
-            Explore our curated collections — from the architecture of our
-            capsules to the experiences we design for each guest. Every
-            collection is a chapter of the Capsules® story.
+            Explorez nos collections — des fragrances signature aux coffrets
+            découverte, en passant par les recharges éco-responsables et les
+            bougies parfumées. Chaque création est un chapitre de l'histoire
+            Omibra®.
           </p>
         </div>
       </section>
@@ -248,12 +249,12 @@ const Collections = () => {
                   <div className="flex items-center justify-between">
                     <span className="text-[#b1a696] text-[0.65rem] md:text-[0.7rem]">
                       {collection.items}{" "}
-                      {collection.items > 1 ? "items" : "item"}
+                      {collection.items > 1 ? "articles" : "article"}
                     </span>
 
                     <Link
                       to={`/products`}
-                      aria-label={`Explore ${collection.name}`}
+                      aria-label={`Explorer ${collection.name}`}
                       className="flex items-center justify-center w-9 h-9 md:w-10 md:h-10 rounded-full bg-[#f4efe7] text-[#181717] hover:scale-110 transition-transform"
                     >
                       <MdArrowOutward className="w-4 h-4 md:w-5 md:h-5" />
@@ -281,28 +282,28 @@ const Collections = () => {
         <div className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden rounded-2xl md:rounded-3xl">
           <img
             src={col1}
-            alt="Featured collection"
+            alt="Collection signature Omibra"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#181717]/95 via-[#181717]/50 to-transparent" />
           <div className="absolute inset-0 flex flex-col justify-center p-6 md:p-12 max-w-xl">
             <span className="text-[0.7rem] font-bold text-[#eae5dd] mb-3">
-              Featured Collection
+              Collection signature
             </span>
             <h2 className="text-[#f4efe7] text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] leading-[0.95] font-medium tracking-tight mb-4">
-              The Classic
+              Ambre
               <br />
-              Capsule®
+              Omibra®
             </h2>
             <p className="text-[#b1a696] text-sm md:text-base leading-relaxed mb-6 max-w-md">
-              Where it all started. A single capsule in the middle of the
-              desert — refined, quiet, and unforgettable.
+              Là où tout a commencé. Un sillage chaleureux d'ambre et de bois
+              précieux — enveloppant, discret et inoubliable.
             </p>
             <Link
               to="/products"
               className="self-start inline-flex items-center gap-2 border border-[#f4efe7] text-[#f4efe7] px-6 py-2.5 rounded-full text-sm hover:bg-[#f4efe7] hover:text-[#181717] transition-colors"
             >
-              Discover
+              Découvrir
               <MdArrowOutward className="w-4 h-4" />
             </Link>
           </div>
@@ -312,18 +313,18 @@ const Collections = () => {
       {/* ============ CTA ============ */}
       <section className="w-full px-5 md:px-8 py-16 md:py-32 flex flex-col items-center gap-4 text-center">
         <h2 className="text-[#f4efe7] text-[2rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] leading-[0.95] font-medium tracking-tight max-w-4xl">
-          Explore all our
+          Explorez toutes
           <br />
-          collections.
+          nos collections.
         </h2>
         <p className="mt-2 text-[#b1a696] text-sm md:text-base max-w-xl">
-          Each capsule, each detail, each experience — curated with intention.
+          Chaque parfum, chaque détail, chaque coffret — pensé avec intention.
         </p>
         <Link
           to="/products"
           className="mt-6 inline-flex items-center gap-2 border border-[#f4efe7] text-[#f4efe7] px-6 md:px-8 py-2.5 md:py-3 rounded-full text-sm md:text-base hover:bg-[#f4efe7] hover:text-[#181717] transition-colors"
         >
-          View our capsules
+          Voir nos parfums
           <MdArrowOutward className="w-4 h-4" />
         </Link>
       </section>

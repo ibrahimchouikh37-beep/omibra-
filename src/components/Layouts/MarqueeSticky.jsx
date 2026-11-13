@@ -46,9 +46,9 @@ const MarqueeSticky = () => {
       {/* min-h : donne de la place au marquee ; plus bas sur mobile */}
       <div className="pin-con relative pb-10 md:pb-16 min-h-[45svh] md:min-h-[60svh]">
         <p className="choose-subtitle px-4 pt-6 md:pl-8 md:pt-8 text-xs md:text-[0.7rem] leading-relaxed text-[#eae5dd]">
-          Want to learn more about
+          Envie d'en savoir plus sur
           <br />
-          the benefits of—Capsules<span>®</span>?
+          l'univers des parfums—Omibra<span>®</span> ?
         </p>
 
         {/* Marquee dans le flux (plus de position absolute) :

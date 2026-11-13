@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import banner from "../../assets/background3.png";
+import banner from "../../assets/omi.jpg";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -48,13 +48,13 @@ const FooterBanner = () => {
         <img
           ref={fbImgRef}
           src={banner}
-          alt="Capsules banner"
+          alt="Bannière Omibra Parfums"
           className="w-full h-[60vh] md:h-[80vh] object-cover"
         />
 
         {/* Titre central */}
         <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] sm:text-[12vw] md:text-[10vw] font-bold text-[#f4efe7] whitespace-nowrap">
-          Capsules
+          Omibra
           <sub className="text-[7vw] sm:text-[6vw] md:text-[5vw] align-baseline">
             ®
           </sub>
@@ -67,17 +67,17 @@ const FooterBanner = () => {
               className="text-start md:text-[#f4efe7] text-[#b1a696] text-lg sm:text-xl md:text-2xl font-bold md:tracking-wider leading-snug flex flex-col gap-0.5 md:gap-1"
               style={{ textShadow: "2px 2px 4px #000" }}
             >
-              <span>Closer to</span>
-              <span>Nature—Closer</span>
-              <span>to Yourself</span>
+              <span>L'Art du</span>
+              <span>Parfum—</span>
+              <span>l'Émotion</span>
             </h2>
 
             <p
               className="md:w-[20%] w-full text-[#f4efe7] text-[0.65rem] sm:text-[0.7rem] font-medium tracking-wide md:text-end text-justify leading-relaxed"
               style={{ textShadow: "2px 2px 4px #000" }}
             >
-              Spend unforgettable and remarkable time in the Californian
-              desert with—Capsules.
+              Découvrez des fragrances d'exception, conçues pour révéler votre
+              personnalité et laisser une empreinte inoubliable.
             </p>
           </div>
         </div>

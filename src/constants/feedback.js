@@ -1,43 +1,43 @@
 export const feedbackH1LG = [
     [
-        "Staying at Capsules® in the",
-        "California desert redefined my",
-        "retreat — modern design meets",
-        "nature, and every sunset feels",
-        "like a serene masterpiece."
+        "Omibra® a transformé ma façon",
+        "de porter le parfum — chaque",
+        "fragrance raconte une histoire",
+        "intime, et chaque sillage",
+        "devient une signature unique."
     ],
     [
-        "Capsules® offered the perfect",
-        "escape — sleek, modern spaces",
-        "surrounded by desert stillness.",
-        "Each moment felt peaceful,",
-        "grounded, and truly unique."
+        "Omibra® incarne l'élégance",
+        "discrète — des compositions",
+        "rares, portées par des notes",
+        "profondes qui évoluent",
+        "avec la peau."
     ],
     [
-        "Capsules® was the perfect",
-        "desert hideaway — stylish,",
-        "peaceful, and fully surrounded",
-        "by stunning views day and",
-        " night."
+        "Omibra® est bien plus qu'un",
+        "parfum — c'est une présence,",
+        "une émotion qui se révèle",
+        "au fil des heures et laisse",
+        "une empreinte inoubliable."
     ]
 ];
 
 export const feedbackReviewLG = [
     [
-        "Marcus Simpson",
-        "New York",
+        "aymane mallouk",
+        "Casablanca",
         "review1",
         "33%"
     ],
     [
-        "Lena Morrison",
-        "Los Angeles",
+        "Ghita lotfi",
+        "Rabat",
         "review2",
         "66%"
     ],
     [
-        "Jason Whitaker",
-        "San Francisco",
+        "Younes Haimoud",
+        "Tanger",
         "review3",
         "100%"
     ]

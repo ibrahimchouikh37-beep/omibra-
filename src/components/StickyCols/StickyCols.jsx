@@ -3,8 +3,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText"; // GSAP >= 3.13 (option `mask`)
 import { useGSAP } from "@gsap/react";
-import colimg1 from "../../assets/cap1-square.jpg";
-import colimg2 from "../../assets/cap2-square.jpg";
+import colimg1 from "../../assets/elis.jpg";
+import colimg2 from "../../assets/elis.jpg";
 import "./StickyCols.css";
 
 gsap.registerPlugin(ScrollTrigger, SplitText, useGSAP);
@@ -17,12 +17,12 @@ const TOTAL = 3;
 // Contenu centralisé : on le modifie ici, pas dans le JSX
 const SLIDES = [
   {
-    title: "Enjoy the view through the wide panoramic glass window",
-    text: "Get closer to the desert nature than ever before and admire this unique, breathtaking landscape.",
+    title: "Une signature olfactive qui évolue avec vous, du matin au soir",
+    text: "Des matières premières d'exception, sélectionnées pour leur tenue et leur intensité, pour une empreinte inoubliable.",
   },
   {
-    title: "Enjoy the view through the wide panoramic glass window",
-    text: "Get closer to the desert nature than ever before and admire this unique, breathtaking landscape.",
+    title: "Une signature olfactive qui évolue avec vous, du matin au soir",
+    text: "Des matières premières d'exception, sélectionnées pour leur tenue et leur intensité, pour une empreinte inoubliable.",
   },
 ];
 

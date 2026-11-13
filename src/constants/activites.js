@@ -1,4 +1,4 @@
 export const activitiesLinesLG = [
-    "Discover the",
-    "desert activities"
-]
+    "Explorez nos",
+    "familles olfactives"
+];

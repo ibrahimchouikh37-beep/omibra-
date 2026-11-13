@@ -4,8 +4,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useMediaQuery } from "react-responsive";
 import { welcomeLinesLG, welcomeLinesSM } from "../../constants/welcome";
-import w1 from "../../assets/welcome-1.png";
-import w2 from "../../assets/welcome-2.png";
+import w1 from "../../assets/omik.jpg";
+import w2 from "../../assets/omik0.jpg";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -78,20 +78,20 @@ const Welcome = () => {
         <div className="flex flex-row justify-center items-center gap-1">
           <img
             src={w1}
-            alt="welcome image"
+            alt="Omibra Parfums ambiance"
             className="md:rounded-[8rem] rounded-[9rem] md:w-56 w-44"
           />
           <img
             src={w2}
-            alt="welcome image"
+            alt="Omibra Parfums flacon"
             className="md:rounded-[8rem] rounded-[9rem] md:w-56 w-44"
           />
         </div>
         <div className="md:w-1/2 w-full md:mt-0 mt-10">
           <p className="md:text-[2rem] text-[1.4rem] text-[#b1a696] md:leading-[1.1] md:pr-24 font-normal leading-[26px] tracking-[-0.2px]">
-            <span>A place where you can be with yourself and your loved ones.</span>
+            <span>Un univers où chaque parfum devient une extension de vous-même.</span>
             <br />
-            <span>A place where you can experience unforgettable desert things.</span>
+            <span>Une expérience olfactive rare, entre élégance et émotion.</span>
           </p>
         </div>
       </div>

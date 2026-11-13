@@ -15,10 +15,10 @@ const Navbar = () => {
   const location = useLocation();
 
   const navItems = [
-    { label: "Home", href: "/", type: "route" },
-    { label: "About", href: "/about", type: "route" },
+    { label: "Accueil", href: "/", type: "route" },
+    { label: "À propos", href: "/about", type: "route" },
     { label: "Collections", href: "/collections", type: "route" },
-    { label: "Products", href: "/products", type: "route" },
+    { label: "Parfums", href: "/products", type: "route" },
     { label: "Services", href: "/services", type: "route" },
     { label: "Contact", href: "/contact", type: "route" },
   ];
@@ -101,7 +101,7 @@ const Navbar = () => {
           to="/"
           className="text-[#f4efe7] font-bold text-lg md:text-xl tracking-tight"
         >
-          Capsules<span className="text-[#b1a696]">®</span>
+          Omibra<span className="text-[#b1a696]">®</span>
         </Link>
 
         {/* Liens desktop */}
@@ -132,12 +132,12 @@ const Navbar = () => {
             to="/contact"
             className="hidden md:inline-block border border-[#f4efe7] text-[#f4efe7] text-sm px-4 py-1.5 rounded-full hover:bg-[#f4efe7] hover:text-[#181717] transition-colors"
           >
-            Reserve
+            Nous contacter
           </Link>
 
           <button
             onClick={() => setMenuOpen((v) => !v)}
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
             className="md:hidden text-[#f4efe7] text-2xl p-1"
           >
             {menuOpen ? <HiX /> : <HiMenu />}
@@ -174,7 +174,7 @@ const Navbar = () => {
           onClick={() => setMenuOpen(false)}
           className="nav-mobile-item mt-4 border border-[#f4efe7] text-[#f4efe7] px-6 py-2 rounded-full hover:bg-[#f4efe7] hover:text-[#181717] transition-colors"
         >
-          Reserve
+          Nous contacter
         </Link>
       </div>
     </>

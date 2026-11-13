@@ -22,7 +22,7 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
-    subject: "reservation",
+    subject: "information",
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
@@ -32,25 +32,25 @@ const Contact = () => {
     {
       icon: MdEmail,
       label: "Email",
-      value: "hello@capsules.com",
-      href: "mailto:hello@capsules.com",
+      value: "hello@omibra.com",
+      href: "mailto:hello@omibra.com",
     },
     {
       icon: MdPhone,
-      label: "Phone",
-      value: "+1 (310) 555-0199",
-      href: "tel:+13105550199",
+      label: "Téléphone",
+      value: "+33 1 23 45 67 89",
+      href: "tel:+33123456789",
     },
     {
       icon: MdLocationOn,
-      label: "Location",
-      value: "Mojave Desert, California",
+      label: "Adresse",
+      value: "Paris, France",
       href: null,
     },
     {
       icon: MdAccessTime,
-      label: "Hours",
-      value: "Mon–Sun · 9am–9pm PST",
+      label: "Horaires",
+      value: "Lun–Sam · 10h–19h",
       href: null,
     },
   ];
@@ -58,24 +58,24 @@ const Contact = () => {
   // FAQ
   const faqs = [
     {
-      q: "How do I book a capsule?",
-      a: "Select your capsule on our Products page, choose your dates, and complete the reservation online. Our concierge team will contact you within 24 hours to confirm details.",
+      q: "Comment choisir mon parfum ?",
+      a: "Parcourez nos créations sur la page Parfums ou commandez un coffret découverte pour tester nos trois signatures. Notre équipe peut aussi vous conseiller par email ou téléphone.",
     },
     {
-      q: "Can I cancel my reservation?",
-      a: "Yes, free cancellation up to 14 days before your stay. Between 14 and 7 days, 50% of the total is refunded. Less than 7 days, the stay is non-refundable.",
+      q: "Puis-je retourner un parfum ?",
+      a: "Oui, vous disposez de 14 jours après réception pour retourner un flacon non ouvert et non utilisé, dans son emballage d'origine. Les frais de retour sont à votre charge.",
     },
     {
-      q: "Do you offer airport transfers?",
-      a: "Yes — we offer private transfers from LAX to the capsules. Include this option when booking or contact us directly.",
+      q: "Livrez-vous à l'international ?",
+      a: "Oui, nous livrons dans toute l'Europe et à l'international. Les délais et frais varient selon la destination, calculés au moment de la commande.",
     },
     {
-      q: "Are pets allowed?",
-      a: "Small pets under 10kg are welcome in our Terrace and Desert capsules. Please inform us at the time of booking.",
+      q: "Vos parfums sont-ils vegan et cruelty-free ?",
+      a: "Toutes nos créations sont vegan, non testées sur les animaux, et composées d'ingrédients naturels tracés. Nous sommes engagés dans une parfumerie responsable.",
     },
     {
-      q: "Is there Wi-Fi?",
-      a: "Yes, each capsule has high-speed satellite internet. However, we encourage you to disconnect — the desert is better than the screen.",
+      q: "Proposez-vous des échantillons ?",
+      a: "Oui, chaque commande inclut deux échantillons offerts. Vous pouvez également commander un coffret découverte de nos trois créations signature.",
     },
   ];
 
@@ -96,7 +96,7 @@ const Contact = () => {
       name: "",
       email: "",
       phone: "",
-      subject: "reservation",
+      subject: "information",
       message: "",
     });
   };
@@ -178,13 +178,13 @@ const Contact = () => {
             Contact
           </p>
           <h1 className="text-[#f4efe7] text-[3rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[8rem] leading-[0.95] font-medium tracking-tighter">
-            Get in
+            Prenons
             <br />
-            touch.
+            contact.
           </h1>
           <p className="mt-6 md:mt-8 text-[#b1a696] text-sm md:text-base max-w-2xl leading-relaxed">
-            A question about a capsule, a custom stay, or a partnership? Send
-            us a message — we reply within 24 hours.
+            Une question sur une fragrance, une commande personnalisée ou un
+            partenariat ? Écrivez-nous — nous répondons sous 24 heures.
           </p>
         </div>
       </section>
@@ -195,7 +195,7 @@ const Contact = () => {
           {/* Infos gauche (2 cols) */}
           <div className="lg:col-span-2">
             <p className="text-[.7rem] font-bold text-[#eae5dd] mb-6">
-              Contact information
+              Coordonnées
             </p>
 
             <div className="info-grid flex flex-col gap-4">
@@ -239,7 +239,7 @@ const Contact = () => {
             {/* Réseaux sociaux */}
             <div className="mt-8">
               <p className="text-[.7rem] font-bold text-[#eae5dd] mb-3">
-                Follow us
+                Suivez-nous
               </p>
               <div className="flex gap-2">
                 {["Instagram", "Behance", "LinkedIn", "Dribbble"].map(
@@ -264,14 +264,14 @@ const Contact = () => {
               className="contact-form p-6 md:p-8 rounded-2xl md:rounded-3xl bg-[#2a2725]/50 border border-[#b1a696]/10"
             >
               <p className="text-[.7rem] font-bold text-[#eae5dd] mb-6">
-                Send us a message
+                Envoyez-nous un message
               </p>
 
               {/* Nom + Email */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div className="form-field">
                   <label className="block text-[#b1a696] text-xs mb-2">
-                    Name *
+                    Nom *
                   </label>
                   <input
                     type="text"
@@ -279,7 +279,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    placeholder="Your name"
+                    placeholder="Votre nom"
                     className="w-full px-4 py-3 rounded-xl bg-[#181717] border border-[#b1a696]/20 text-[#f4efe7] text-sm placeholder:text-[#b1a696]/50 focus:outline-none focus:border-[#f4efe7]/50 transition-colors"
                   />
                 </div>
@@ -293,7 +293,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    placeholder="you@email.com"
+                    placeholder="vous@email.com"
                     className="w-full px-4 py-3 rounded-xl bg-[#181717] border border-[#b1a696]/20 text-[#f4efe7] text-sm placeholder:text-[#b1a696]/50 focus:outline-none focus:border-[#f4efe7]/50 transition-colors"
                   />
                 </div>
@@ -303,20 +303,20 @@ const Contact = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div className="form-field">
                   <label className="block text-[#b1a696] text-xs mb-2">
-                    Phone
+                    Téléphone
                   </label>
                   <input
                     type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="+1 (000) 000-0000"
+                    placeholder="+33 0 00 00 00 00"
                     className="w-full px-4 py-3 rounded-xl bg-[#181717] border border-[#b1a696]/20 text-[#f4efe7] text-sm placeholder:text-[#b1a696]/50 focus:outline-none focus:border-[#f4efe7]/50 transition-colors"
                   />
                 </div>
                 <div className="form-field">
                   <label className="block text-[#b1a696] text-xs mb-2">
-                    Subject
+                    Sujet
                   </label>
                   <select
                     name="subject"
@@ -324,11 +324,11 @@ const Contact = () => {
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl bg-[#181717] border border-[#b1a696]/20 text-[#f4efe7] text-sm focus:outline-none focus:border-[#f4efe7]/50 transition-colors"
                   >
-                    <option value="reservation">Reservation</option>
                     <option value="information">Information</option>
-                    <option value="partnership">Partnership</option>
-                    <option value="press">Press</option>
-                    <option value="other">Other</option>
+                    <option value="commande">Commande</option>
+                    <option value="partenariat">Partenariat</option>
+                    <option value="presse">Presse</option>
+                    <option value="autre">Autre</option>
                   </select>
                 </div>
               </div>
@@ -344,7 +344,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  placeholder="Tell us about your stay..."
+                  placeholder="Parlez-nous de votre projet..."
                   className="w-full px-4 py-3 rounded-xl bg-[#181717] border border-[#b1a696]/20 text-[#f4efe7] text-sm placeholder:text-[#b1a696]/50 focus:outline-none focus:border-[#f4efe7]/50 transition-colors resize-none"
                 />
               </div>
@@ -354,7 +354,7 @@ const Contact = () => {
                 type="submit"
                 className="form-field w-full md:w-auto inline-flex items-center justify-center gap-2 bg-[#f4efe7] text-[#181717] px-8 py-3 rounded-full text-sm font-medium hover:bg-[#b1a696] transition-colors"
               >
-                Send message
+                Envoyer le message
                 <MdArrowOutward className="w-4 h-4" />
               </button>
 
@@ -362,7 +362,7 @@ const Contact = () => {
               {submitted && (
                 <div className="form-field mt-4 flex items-center gap-2 p-3 rounded-xl bg-green-500/10 border border-green-500/30 text-green-400 text-sm">
                   <MdCheckCircle className="w-5 h-5 shrink-0" />
-                  Thanks! Your message has been sent.
+                  Merci ! Votre message a bien été envoyé.
                 </div>
               )}
             </form>
@@ -377,18 +377,18 @@ const Contact = () => {
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-center px-6">
             <MdLocationOn className="w-10 h-10 md:w-14 md:h-14 text-[#f4efe7]" />
             <p className="text-[#f4efe7] text-lg md:text-2xl font-medium">
-              Mojave Desert, California
+              Paris, France
             </p>
             <p className="text-[#b1a696] text-sm">
-              35°01'21.9"N 115°28'15.6"W
+              48°51'24.0"N 2°21'03.0"E
             </p>
             <a
-              href="https://maps.google.com/?q=Mojave+Desert+California"
+              href="https://maps.google.com/?q=Paris+France"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 inline-flex items-center gap-2 border border-[#f4efe7] text-[#f4efe7] px-5 py-2 rounded-full text-xs md:text-sm hover:bg-[#f4efe7] hover:text-[#181717] transition-colors"
             >
-              Open in Google Maps
+              Ouvrir dans Google Maps
               <MdArrowOutward className="w-3.5 h-3.5" />
             </a>
           </div>
@@ -409,7 +409,7 @@ const Contact = () => {
           <div className="mb-10 md:mb-14">
             <p className="text-[.7rem] font-bold text-[#eae5dd] mb-3">FAQ</p>
             <h2 className="text-[#f4efe7] text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] leading-[1.05] font-medium tracking-tight">
-              Frequent questions.
+              Questions fréquentes.
             </h2>
           </div>
 
@@ -456,18 +456,18 @@ const Contact = () => {
       {/* ============ CTA ============ */}
       <section className="w-full px-5 md:px-8 py-16 md:py-32 flex flex-col items-center gap-4 text-center">
         <h2 className="text-[#f4efe7] text-[2rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] leading-[0.95] font-medium tracking-tight max-w-4xl">
-          Or simply
+          Ou simplement
           <br />
-          book online.
+          commandez en ligne.
         </h2>
         <p className="mt-2 text-[#b1a696] text-sm md:text-base max-w-xl">
-          Choose your capsule and reserve in under 2 minutes.
+          Choisissez votre fragrance et commandez en moins de 2 minutes.
         </p>
         <Link
           to="/products"
           className="mt-6 inline-flex items-center gap-2 bg-[#f4efe7] text-[#181717] px-6 md:px-8 py-2.5 md:py-3 rounded-full text-sm md:text-base hover:bg-[#b1a696] transition-colors"
         >
-          View capsules
+          Voir les parfums
           <MdArrowOutward className="w-4 h-4" />
         </Link>
       </section>

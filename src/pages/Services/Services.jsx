@@ -5,12 +5,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import {
   MdArrowOutward,
-  MdOutlineWbSunny,
-  MdOutlineRestaurant,
-  MdOutlineDirectionsCar,
-  MdOutlineSelfImprovement,
+  MdOutlineLocalShipping,
+  MdOutlineCardGiftcard,
+  MdOutlineAutorenew,
   MdOutlineSpa,
-  MdOutlineCameraAlt,
+  MdOutlineVerified,
+  MdOutlineSupportAgent,
 } from "react-icons/md";
 
 import serviceImg1 from "../../assets/background1.png";
@@ -26,27 +26,27 @@ const Services = () => {
   const services = [
     {
       number: "01",
-      title: "Private stays",
+      title: "Conseil personnalisé",
       description:
-        "Fully private capsules, designed for one or two guests. No neighbors, no noise — just you and the desert.",
+        "Notre équipe vous accompagne pour trouver la fragrance qui révèle votre personnalité. Un diagnostic olfactif gratuit, en ligne ou en boutique.",
       image: serviceImg1,
-      features: ["2 guests max", "Panoramic views", "Solar powered"],
+      features: ["Diagnostic gratuit", "Conseil expert", "Sur rendez-vous"],
     },
     {
       number: "02",
-      title: "Curated experiences",
+      title: "Coffrets & échantillons",
       description:
-        "Sunrise hikes, stargazing dinners, silent desert walks — each experience is designed by our team.",
+        "Découvrez nos créations signature grâce à nos coffrets découverte. Chaque commande inclut deux échantillons offerts.",
       image: serviceImg2,
-      features: ["Daily activities", "Local guides", "Custom programs"],
+      features: ["3 échantillons", "Emballage cadeau", "Livraison offerte"],
     },
     {
       number: "03",
-      title: "Full concierge",
+      title: "Recharges éco-responsables",
       description:
-        "From airport pickup to private chef, our concierge team takes care of every detail of your stay.",
+        "Prolongez l'expérience Omibra® tout en réduisant votre impact. Rechargez votre flacon avec nos formules concentrées.",
       image: serviceImg3,
-      features: ["24/7 support", "Private chef", "Airport transfer"],
+      features: ["Flacon réutilisable", "Formule concentrée", "-30% de plastique"],
     },
   ];
 
@@ -54,61 +54,61 @@ const Services = () => {
   const steps = [
     {
       number: "01",
-      title: "Choose your capsule",
+      title: "Choisissez votre parfum",
       description:
-        "Browse our three capsule styles and pick the one that fits your stay.",
+        "Parcourez nos trois créations signature et trouvez celle qui vous ressemble.",
     },
     {
       number: "02",
-      title: "Book your dates",
+      title: "Commandez en ligne",
       description:
-        "Select your dates, add experiences, and confirm your reservation online.",
+        "Ajoutez votre fragrance au panier et finalisez votre commande en moins de 2 minutes.",
     },
     {
       number: "03",
-      title: "Plan your stay",
+      title: "Recevez votre coffret",
       description:
-        "Our concierge team contacts you to personalize every detail of your visit.",
+        "Livraison soignée sous 2 à 5 jours, avec deux échantillons offerts dans chaque commande.",
     },
     {
       number: "04",
-      title: "Arrive & disconnect",
+      title: "Vivez l'expérience",
       description:
-        "We handle everything on-site. You just arrive and let the desert do the rest.",
+        "Laissez le parfum évoluer sur votre peau et révéler votre signature tout au long de la journée.",
     },
   ];
 
-  // Features / équipements
+  // Features / engagements
   const features = [
     {
-      icon: MdOutlineWbSunny,
-      title: "Solar powered",
-      description: "100% renewable energy, off the grid.",
+      icon: MdOutlineLocalShipping,
+      title: "Livraison offerte",
+      description: "Dès 80 € d'achat, en France métropolitaine.",
     },
     {
-      icon: MdOutlineRestaurant,
-      title: "Private chef",
-      description: "Locally sourced meals, on demand.",
+      icon: MdOutlineCardGiftcard,
+      title: "Emballage cadeau",
+      description: "Offert sur demande, dans un écrin signature.",
     },
     {
-      icon: MdOutlineDirectionsCar,
-      title: "Airport transfer",
-      description: "Pickup from LAX in a private car.",
-    },
-    {
-      icon: MdOutlineSelfImprovement,
-      title: "Wellness",
-      description: "Yoga, meditation, and spa treatments.",
+      icon: MdOutlineAutorenew,
+      title: "Retours 14 jours",
+      description: "Satisfait ou remboursé, flacon non ouvert.",
     },
     {
       icon: MdOutlineSpa,
-      title: "Spa & massage",
-      description: "In-capsule spa services on request.",
+      title: "Ingrédients naturels",
+      description: "Matières premières tracées et vegan.",
     },
     {
-      icon: MdOutlineCameraAlt,
-      title: "Photography",
-      description: "Professional photo sessions available.",
+      icon: MdOutlineVerified,
+      title: "Élaboré en France",
+      description: "Savoir-faire de la haute parfumerie.",
+    },
+    {
+      icon: MdOutlineSupportAgent,
+      title: "Service client",
+      description: "Réponse sous 24h, du lundi au samedi.",
     },
   ];
 
@@ -116,13 +116,13 @@ const Services = () => {
   const testimonials = [
     {
       quote:
-        "The most peaceful stay of my life. Every detail was perfect — from the silent mornings to the stargazing dinners.",
+        "Le sillage le plus élégant que j'aie porté. Chaque détail est pensé — du flacon à la tenue du parfum.",
       author: "Marcus S.",
       location: "New York",
     },
     {
       quote:
-        "Capsules® redefined what luxury means to me. Less, but better — exactly what I needed.",
+        "Omibra® a redéfini ce que le luxe signifie pour moi. Moins, mais mieux — exactement ce qu'il me fallait.",
       author: "Lena M.",
       location: "Los Angeles",
     },
@@ -223,14 +223,14 @@ const Services = () => {
             Services
           </p>
           <h1 className="text-[#f4efe7] text-[3rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[8rem] leading-[0.95] font-medium tracking-tighter">
-            Everything,
+            Tout est
             <br />
-            taken care of.
+            pensé pour vous.
           </h1>
           <p className="mt-6 md:mt-8 text-[#b1a696] text-sm md:text-base max-w-2xl leading-relaxed">
-            From the moment you book to the moment you leave, our team handles
-            every detail — so you can focus on what matters: the desert, the
-            silence, and yourself.
+            Du choix de votre fragrance à la réception de votre coffret, notre
+            équipe soigne chaque détail — pour que vous puissiez vous concentrer
+            sur l'essentiel : vous, et votre parfum.
           </p>
         </div>
       </section>
@@ -239,10 +239,10 @@ const Services = () => {
       <section className="w-full px-5 md:px-8 pb-16 md:pb-24">
         <div className="mb-10 md:mb-16">
           <p className="text-[.7rem] font-bold text-[#eae5dd] mb-3">
-            What we offer
+            Ce que nous proposons
           </p>
           <h2 className="text-[#f4efe7] text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] leading-[1.05] font-medium tracking-tight max-w-3xl">
-            Three ways to experience Capsules®.
+            Trois façons de vivre l'expérience Omibra®.
           </h2>
         </div>
 
@@ -299,12 +299,12 @@ const Services = () => {
       <section className="w-full px-5 md:px-8 py-16 md:py-24">
         <div className="mb-10 md:mb-16">
           <p className="text-[.7rem] font-bold text-[#eae5dd] mb-3">
-            How it works
+            Comment ça marche
           </p>
           <h2 className="text-[#f4efe7] text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] leading-[1.05] font-medium tracking-tight max-w-3xl">
-            From booking to
+            De la commande à
             <br />
-            check-out — in 4 steps.
+            la découverte — en 4 étapes.
           </h2>
         </div>
 
@@ -332,12 +332,12 @@ const Services = () => {
       <section className="w-full px-5 md:px-8 py-16 md:py-24">
         <div className="mb-10 md:mb-16">
           <p className="text-[.7rem] font-bold text-[#eae5dd] mb-3">
-            Included
+            Inclus
           </p>
           <h2 className="text-[#f4efe7] text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] leading-[1.05] font-medium tracking-tight max-w-3xl">
-            Every stay comes with
+            Chaque commande inclut
             <br />
-            these services.
+            ces engagements.
           </h2>
         </div>
 
@@ -368,10 +368,10 @@ const Services = () => {
       <section className="w-full px-5 md:px-8 py-16 md:py-24">
         <div className="mb-10 md:mb-16">
           <p className="text-[.7rem] font-bold text-[#eae5dd] mb-3">
-            What guests say
+            Ce que disent nos clients
           </p>
           <h2 className="text-[#f4efe7] text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] leading-[1.05] font-medium tracking-tight max-w-3xl">
-            Words from the desert.
+            Paroles d'amateurs de parfum.
           </h2>
         </div>
 
@@ -403,26 +403,26 @@ const Services = () => {
       {/* ============ CTA ============ */}
       <section className="w-full px-5 md:px-8 py-16 md:py-32 flex flex-col items-center gap-4 text-center">
         <h2 className="text-[#f4efe7] text-[2rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] leading-[0.95] font-medium tracking-tight max-w-4xl">
-          Ready to be
+          Prêt à vivre
           <br />
-          taken care of?
+          l'expérience Omibra® ?
         </h2>
         <p className="mt-2 text-[#b1a696] text-sm md:text-base max-w-xl">
-          Book your capsule and let our team handle the rest.
+          Découvrez nos parfums ou contactez-nous pour un conseil personnalisé.
         </p>
         <div className="mt-6 flex flex-col sm:flex-row gap-3">
           <Link
             to="/products"
             className="inline-flex items-center justify-center gap-2 border border-[#f4efe7] text-[#f4efe7] px-6 md:px-8 py-2.5 md:py-3 rounded-full text-sm md:text-base hover:bg-[#f4efe7] hover:text-[#181717] transition-colors"
           >
-            View capsules
+            Voir les parfums
             <MdArrowOutward className="w-4 h-4" />
           </Link>
           <Link
             to="/contact"
             className="inline-flex items-center justify-center gap-2 bg-[#f4efe7] text-[#181717] px-6 md:px-8 py-2.5 md:py-3 rounded-full text-sm md:text-base hover:bg-[#b1a696] transition-colors"
           >
-            Contact us
+            Nous contacter
             <MdArrowOutward className="w-4 h-4" />
           </Link>
         </div>

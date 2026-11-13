@@ -154,7 +154,7 @@ const Preloader = () => {
         <div className="preloader-progress-bar" />
         <div className="preloader-logo">
           <h1 ref={preloaderLogoRef} className="logo-text">
-            Capsule
+            Omibra
           </h1>
         </div>
       </div>
@@ -164,8 +164,8 @@ const Preloader = () => {
       <div className="preloader-content">
         <div className="preloader-footer">
           <p>
-            Spaces unfold in light and shadow, where structure finds its quiet
-            rhythm, and time aligns harmony.
+            Chaque fragrance raconte une histoire, où les notes se dévoilent
+            dans la lumière, et le temps suspend son cours.
           </p>
         </div>
       </div>

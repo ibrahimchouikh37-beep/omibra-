@@ -100,7 +100,7 @@ const MarqueeText = () => {
             aria-hidden={i > 0 ? true : undefined}
           >
             <p className="marquee-text-title">
-              Why Capsules®?
+              Pourquoi Omibra® ?
               <span className="star-rotate" aria-hidden="true">
                 *
               </span>

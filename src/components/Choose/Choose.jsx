@@ -75,7 +75,7 @@ const Choose = () => {
       className="choose-section w-full min-h-dvh p-6 md:p-8 pt-10"
     >
       <p className="text-[.7rem] text-[#eae5dd] choose-subtitle">
-        Discover Available Capsule<span>®</span>
+        Découvrez nos fragrances Omibra<span>®</span>
       </p>
 
       <div className="lg:mt-10 mt-7 title-part origin-bottom">
@@ -93,27 +93,28 @@ const Choose = () => {
       <div className="choose-sec w-full flex lg:flex-row flex-col justify-center items-start gap-10 lg:mt-0 mt-8">
         <div className="lg:w-1/2 w-full text-[#b1a696] lg:text-[2rem] text-[1rem] md:leading-[1.1] lg:pr-16">
           <p>
-            You can choose one of three premium capsule houses in our offer.
-            Each of our capsules provides the highest quality and meets the
-            standards adjusted to your needs. Choose the one you like.
+            Choisissez l'une de nos trois créations olfactives signature. Chaque
+            parfum Omibra® est composé avec des matières premières d'exception
+            et répond aux plus hauts standards de qualité. Trouvez celle qui
+            vous ressemble.
           </p>
         </div>
 
         <div className="lg:w-1/2 w-full">
           <div className="lg:w-[30%] w-[60%]">
             <p className="text-[.7rem] text-[#eae5dd]">
-              All Capsules® houses—has built based on the same rules:
+              Toutes les créations Omibra® partagent la même exigence :
             </p>
           </div>
 
           <div className="flex flex-1 flex-wrap justify-start items-start gap-2 mt-8">
             {[
-              { label: "Sustainable", color: "b1a696" },
-              { label: "Nature—Care", color: "f4efe7" },
-              { label: "Smart", color: "b1a696" },
-              { label: "Privacy", color: "f4efe7" },
-              { label: "Spacious", color: "b1a696" },
-              { label: "Glassed-in", color: "f4efe7" },
+              { label: "Naturel", color: "b1a696" },
+              { label: "Élaboré en France", color: "f4efe7" },
+              { label: "Intense", color: "b1a696" },
+              { label: "Longue tenue", color: "f4efe7" },
+              { label: "Élégant", color: "b1a696" },
+              { label: "Intemporel", color: "f4efe7" },
             ].map(({ label, color }) => (
               <div
                 key={label}

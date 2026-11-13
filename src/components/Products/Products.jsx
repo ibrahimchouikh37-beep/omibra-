@@ -5,9 +5,9 @@ import { useGSAP } from "@gsap/react";
 import { useMediaQuery } from "react-responsive";
 import { MdArrowOutward } from "react-icons/md";
 
-import product1 from "../../assets/background1.png";
-import product2 from "../../assets/background2.png";
-import product3 from "../../assets/background3.png";
+import product1 from "../../assets/omi03.jpg";
+import product2 from "../../assets/omi04.jpg";
+import product3 from "../../assets/omi05.jpg";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -17,31 +17,31 @@ const Products = () => {
 
   const products = [
     {
-      id: "classic",
-      name: "Classic Capsule®",
-      tag: "Refined",
+      id: "ambre",
+      name: "Ambre Omibra®",
+      tag: "Boisé",
       image: product1,
       description:
-        "Refined aesthetics and a modern interior, creating an intimate retreat in a desert landscape.",
-      price: "From $340 / night",
+        "Un sillage chaleureux d'ambre et de bois précieux, enveloppant et intemporel.",
+      price: "À partir de 120 € / 50ml",
     },
     {
-      id: "terrace",
-      name: "Terrace Capsule®",
-      tag: "Panoramic",
+      id: "floral",
+      name: "Floral Omibra®",
+      tag: "Floral",
       image: product2,
       description:
-        "Spacious terrace overlooking the desert dunes. Wake up to the sunrise from your private deck.",
-      price: "From $420 / night",
+        "Un bouquet délicat de fleurs blanches et de musc, lumineux et profondément féminin.",
+      price: "À partir de 135 € / 50ml",
     },
     {
-      id: "desert",
-      name: "Desert Capsule®",
-      tag: "Isolated",
+      id: "oud",
+      name: "Oud Omibra®",
+      tag: "Oriental",
       image: product3,
       description:
-        "The most secluded capsule, built for total immersion in the silence and beauty of the desert.",
-      price: "From $510 / night",
+        "Une signature intense d'oud et d'épices rares, pour une présence magnétique et mystérieuse.",
+      price: "À partir de 160 € / 50ml",
     },
   ];
 
@@ -110,12 +110,12 @@ const Products = () => {
       {/* Header */}
       <div className="w-full mb-10 md:mb-16">
         <p className="text-[.7rem] font-bold text-[#eae5dd] mb-3">
-          Available Capsules
+          Nos fragrances signature
         </p>
         <h2 className="text-[#f4efe7] text-[2.5rem] sm:text-[3.5rem] md:text-[5rem] lg:text-[6rem] leading-[0.95] font-medium tracking-tighter">
-          Choose the one
+          Choisissez votre
           <br />
-          you like best
+          signature olfactive
         </h2>
       </div>
 
@@ -163,7 +163,7 @@ const Products = () => {
 
                   <button
                     className="flex items-center justify-center w-9 h-9 md:w-10 md:h-10 rounded-full bg-[#f4efe7] text-[#181717] hover:scale-110 transition-transform"
-                    aria-label={`Discover ${product.name}`}
+                    aria-label={`Découvrir ${product.name}`}
                   >
                     <MdArrowOutward className="w-4 h-4 md:w-5 md:h-5" />
                   </button>
@@ -180,10 +180,10 @@ const Products = () => {
       {/* CTA fin de section */}
       <div className="w-full mt-12 md:mt-20 flex justify-center">
         <a
-          href="#reserve"
+          href="#collection"
           className="inline-flex items-center gap-2 border border-[#f4efe7] text-[#f4efe7] px-6 md:px-8 py-2.5 md:py-3 rounded-full text-sm md:text-base hover:bg-[#f4efe7] hover:text-[#181717] transition-colors"
         >
-          Reserve your capsule
+          Découvrir la collection
           <MdArrowOutward className="w-4 h-4" />
         </a>
       </div>

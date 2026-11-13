@@ -4,9 +4,9 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 
-import acImg1 from "../../assets/activities-1.png";
-import acImg2 from "../../assets/activities-2.png";
-import acImg3 from "../../assets/activities-3.png";
+import acImg1 from "../../assets/omi03.jpg";
+import acImg2 from "../../assets/omi04.jpg";
+import acImg3 from "../../assets/omi05.jpg";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -73,19 +73,19 @@ const Showcase = () => {
                 ref={imgConRef}
                 className="absolute top-0 left-0 h-full flex items-center justify-start gap-2 p-2 overflow-hidden"
             >
-                {/* Image 1 */}
+                {/* Image 1 — Frais */}
                 <div className="relative flex-shrink-0 w-[80vw] h-full overflow-hidden">
                     <div className="w-[77vw] absolute top-10 left-5 flex justify-between items-start text-[#f4efe7]">
-                        <h1 className="text-3xl font-bold">Buggy tours<br /> in the desert</h1>
-                        <p className="border-[1px] rounded-3xl px-2 py-1 text-center text-[0.7rem]">Easy</p>
+                        <h1 className="text-3xl font-bold">Fraîcheur<br />matinale</h1>
+                        <p className="border-[1px] rounded-3xl px-2 py-1 text-center text-[0.7rem]">Frais</p>
                     </div>
                     <img
                         src={acImg1}
-                        alt="Activity 1"
+                        alt="Omibra - fragrance fraîche"
                         className="image-item w-full h-full object-cover rounded-[2.5rem]"
                     />
                     <div className="w-[77vw] absolute bottom-10 left-5 flex justify-between items-start ">
-                        <p className="text-[0.68rem] font-bold text-[#f4efe7]">Explore the terrain on a guided buggy tour that takes<br />you through the desert’s vast and open landscapes.t</p>
+                        <p className="text-[0.68rem] font-bold text-[#f4efe7]">Des notes d'agrumes et de fleurs blanches qui<br />évoquent la lumière du matin et la rosée.</p>
                         <div className="flex justify-center items-center">
                             <p className="text-[#f4efe7] border-[1px] rounded-3xl px-[1vw] py-1 text-center text-[0.7rem]">01</p>
                             <p className="text-[#4e484e] border-[1px] rounded-3xl px-[1vw] py-1 text-center text-[0.7rem]">03</p>
@@ -93,19 +93,19 @@ const Showcase = () => {
                     </div>
                 </div>
 
-                {/* Image 2 */}
+                {/* Image 2 — Boisé */}
                 <div className="relative flex-shrink-0 w-[80vw] h-full overflow-hidden">
                     <div className="w-[77vw] absolute top-10 left-5 flex justify-between items-start text-[#f4efe7]">
-                        <h1 className="text-3xl font-bold">Breathtaking<br />desert hikes</h1>
-                        <p className="border-[1px] rounded-3xl px-2 py-1 text-center text-[0.7rem]">Medium</p>
+                        <h1 className="text-3xl font-bold">Profondeur<br />boisée</h1>
+                        <p className="border-[1px] rounded-3xl px-2 py-1 text-center text-[0.7rem]">Boisé</p>
                     </div>
                     <img
                         src={acImg2}
-                        alt="Activity 1"
+                        alt="Omibra - fragrance boisée"
                         className="image-item w-full h-full object-cover rounded-[2.5rem]"
                     />
                     <div className="w-[77vw] absolute bottom-10 left-5 flex justify-between items-start ">
-                        <p className="text-[0.68rem] font-bold text-[#f4efe7]">Explore the terrain on a guided buggy tour that takes<br />you through the desert’s vast and open landscapes.t</p>
+                        <p className="text-[0.68rem] font-bold text-[#f4efe7]">Un cœur de cèdre, de vétiver et de santal pour<br />une signature élégante et enveloppante.</p>
                         <div className="flex justify-center items-center">
                             <p className="text-[#f4efe7] border-[1px] rounded-3xl px-[1vw] py-1 text-center text-[0.7rem]">02</p>
                             <p className="text-[#4e484e] border-[1px] rounded-3xl px-[1vw] py-1 text-center text-[0.7rem]">03</p>
@@ -113,19 +113,19 @@ const Showcase = () => {
                     </div>
                 </div>
 
-                {/* Image 3 */}
+                {/* Image 3 — Oriental */}
                 <div className="relative flex-shrink-0 w-[80vw] h-full overflow-hidden">
                     <div className="w-[77vw] absolute top-10 left-5 flex justify-between items-start text-[#f4efe7]">
-                        <h1 className="text-3xl font-bold">Exciting<br /> rock climbing</h1>
-                        <p className="border-[1px] rounded-3xl px-2 py-1 text-center text-[0.7rem]">Hard</p>
+                        <h1 className="text-3xl font-bold">Chaleur<br />orientale</h1>
+                        <p className="border-[1px] rounded-3xl px-2 py-1 text-center text-[0.7rem]">Oriental</p>
                     </div>
                     <img
                         src={acImg3}
-                        alt="Activity 1"
+                        alt="Omibra - fragrance orientale"
                         className="image-item w-full h-full object-cover rounded-[2.5rem]"
                     />
                     <div className="w-[77vw] absolute bottom-10 left-5 flex justify-between items-start ">
-                        <p className="text-[0.68rem] font-bold text-[#f4efe7]">Explore the terrain on a guided buggy tour that takes<br />you through the desert’s vast and open landscapes.t</p>
+                        <p className="text-[0.68rem] font-bold text-[#f4efe7]">Ambre, oud et épices rares pour une présence<br />magnétique et profondément sensuelle.</p>
                         <div className="flex justify-center items-center">
                             <p className="text-[#f4efe7] border-[1px] rounded-3xl px-[1vw] py-1 text-center text-[0.7rem]">03</p>
                             <p className="text-[#4e484e] border-[1px] rounded-3xl px-[1vw] py-1 text-center text-[0.7rem]">03</p>

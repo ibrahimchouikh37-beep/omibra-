@@ -18,36 +18,36 @@ const About = () => {
   const values = [
     {
       number: "01",
-      title: "Sustainable",
+      title: "Naturalité",
       description:
-        "Each capsule is built with eco-friendly materials and designed to minimize its footprint in the desert.",
+        "Chaque fragrance est composée à partir de matières premières naturelles, sélectionnées pour leur qualité et leur traçabilité.",
     },
     {
       number: "02",
-      title: "Nature—Care",
+      title: "Savoir-faire",
       description:
-        "We work hand in hand with local communities and conservation programs to protect the Californian desert.",
+        "Nos parfums sont élaborés en France, dans le respect des traditions de la haute parfumerie et du geste artisanal.",
     },
     {
       number: "03",
-      title: "Smart",
+      title: "Intensité",
       description:
-        "Solar power, water recycling, and smart climate systems — luxury that respects the environment.",
+        "Des concentrations élevées et des notes profondes, pour une tenue longue durée et un sillage qui se remarque.",
     },
     {
       number: "04",
-      title: "Privacy",
+      title: "Singularité",
       description:
-        "Every capsule is positioned to offer total isolation. No neighbors, no noise — just you and the desert.",
+        "Chaque création raconte une histoire unique. Aucune fragrance Omibra® ne ressemble à une autre — comme vous.",
     },
   ];
 
   // Chiffres clés
   const stats = [
-    { value: "3", label: "Unique capsules" },
-    { value: "12k+", label: "Guests hosted" },
-    { value: "100%", label: "Solar powered" },
-    { value: "4.9", label: "Guest rating" },
+    { value: "3", label: "Créations signature" },
+    { value: "12k+", label: "Clients satisfaits" },
+    { value: "100%", label: "Ingrédients naturels" },
+    { value: "4.9", label: "Note moyenne" },
   ];
 
   // Animations
@@ -150,21 +150,21 @@ const About = () => {
       {/* ============ HERO ============ */}
       <section className="w-full min-h-[80vh] md:min-h-dvh flex flex-col justify-center px-5 md:px-8 pt-24 md:pt-32 pb-12 md:pb-20">
         <div className="about-hero max-w-5xl">
-          <p className="text-[.7rem] font-bold text-[#eae5dd] mb-4">About</p>
+          <p className="text-[.7rem] font-bold text-[#eae5dd] mb-4">À propos</p>
 
           <h1 className="text-[#f4efe7] text-[3rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[8rem] leading-[0.95] font-medium tracking-tighter">
-            A new way to
+            L'art de
             <br />
-            experience the
+            révéler votre
             <br />
-            desert.
+            signature.
           </h1>
 
           <p className="mt-6 md:mt-8 text-[#b1a696] text-sm md:text-base max-w-2xl leading-relaxed">
-            Capsules® was born from a simple idea: what if luxury could be
-            silent, sustainable, and completely in tune with nature? Our
-            capsules are a tribute to the Californian desert — its light, its
-            silence, its timeless beauty.
+            Omibra® est née d'une idée simple : et si le luxe pouvait être
+            discret, naturel et profondément personnel ? Nos parfums sont un
+            hommage aux matières premières — leur lumière, leur texture, leur
+            beauté intemporelle.
           </p>
         </div>
       </section>
@@ -174,16 +174,16 @@ const About = () => {
         <div className="relative w-full h-[50vh] md:h-[70vh] overflow-hidden rounded-2xl md:rounded-3xl">
           <img
             src={aboutImg1}
-            alt="Capsules in the desert"
+            alt="Omibra Parfums - univers"
             className="about-img w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#181717]/70 via-transparent to-transparent" />
           <div className="absolute bottom-6 md:bottom-10 left-6 md:left-10 max-w-md">
             <p className="text-[#f4efe7] text-lg md:text-2xl font-medium leading-snug">
-              "The desert doesn't need us. We need the desert."
+              « Le parfum n'a pas besoin de nous. C'est nous qui avons besoin du parfum. »
             </p>
             <p className="text-[#b1a696] text-[0.7rem] md:text-xs mt-2">
-              — Capsules® Philosophy
+              — Philosophie Omibra®
             </p>
           </div>
         </div>
@@ -194,10 +194,10 @@ const About = () => {
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 md:gap-16">
           <div className="md:w-1/3">
             <p className="text-[.7rem] font-bold text-[#eae5dd] mb-3">
-              Our story
+              Notre histoire
             </p>
             <h2 className="text-[#f4efe7] text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] leading-[1.05] font-medium tracking-tight">
-              Built with
+              Créé avec
               <br />
               intention.
             </h2>
@@ -205,21 +205,23 @@ const About = () => {
 
           <div className="md:w-2/3 md:pr-16">
             <p className="text-[#b1a696] text-sm md:text-base leading-relaxed mb-4">
-              The idea for Capsules® started in 2022, when a small team of
-              architects, designers, and nature lovers spent a month living in
-              the Mojave desert. We wanted to create a place where people could
-              disconnect — truly — without sacrificing comfort or design.
+              L'idée d'Omibra® est née en 2022, lorsqu'une petite équipe de
+              parfumeurs, de designers et d'amoureux de la nature a passé un an
+              à explorer les matières premières les plus rares. Nous voulions
+              créer des parfums qui révèlent une personnalité — sans jamais la
+              trahir.
             </p>
             <p className="text-[#b1a696] text-sm md:text-base leading-relaxed mb-4">
-              Each capsule is handcrafted, positioned to offer total privacy,
-              and built with materials that respect the environment. No
-              concrete, no noise, no crowd — just you, the dunes, and the sky.
+              Chaque fragrance est composée à la main, dosée avec précision, et
+              élaborée à partir d'ingrédients qui respectent la nature. Pas de
+              superflu, pas de bruit, pas de tendance — juste vous, votre peau,
+              et le sillage.
             </p>
             <p className="text-[#b1a696] text-sm md:text-base leading-relaxed">
-              Today, Capsules® welcomes guests from all over the world, but our
-              philosophy remains the same:{" "}
+              Aujourd'hui, Omibra® accompagne des clients du monde entier, mais
+              notre philosophie reste la même :{" "}
               <span className="text-[#f4efe7]">
-                less, but better. Slower, but deeper.
+                moins, mais mieux. Plus lent, mais plus profond.
               </span>
             </p>
           </div>
@@ -230,10 +232,10 @@ const About = () => {
       <section className="w-full px-5 md:px-8 py-16 md:py-24">
         <div className="mb-10 md:mb-16">
           <p className="text-[.7rem] font-bold text-[#eae5dd] mb-3">
-            Our values
+            Nos valeurs
           </p>
           <h2 className="text-[#f4efe7] text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] leading-[1.05] font-medium tracking-tight max-w-3xl">
-            Four principles guide everything we do.
+            Quatre principes guident chacune de nos créations.
           </h2>
         </div>
 
@@ -282,14 +284,14 @@ const About = () => {
           <div className="relative w-full h-[40vh] md:h-[60vh] overflow-hidden rounded-2xl md:rounded-3xl">
             <img
               src={aboutImg2}
-              alt="Inside a Capsule"
+              alt="Omibra Parfums - flacon"
               className="about-img w-full h-full object-cover"
             />
           </div>
           <div className="relative w-full h-[40vh] md:h-[60vh] overflow-hidden rounded-2xl md:rounded-3xl">
             <img
               src={aboutImg3}
-              alt="Desert view from Capsule"
+              alt="Omibra Parfums - détail"
               className="about-img w-full h-full object-cover"
             />
           </div>
@@ -299,18 +301,18 @@ const About = () => {
       {/* ============ CTA ============ */}
       <section className="w-full px-5 md:px-8 py-16 md:py-32 flex flex-col items-center gap-4 text-center">
         <h2 className="text-[#f4efe7] text-[2rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] leading-[0.95] font-medium tracking-tight max-w-4xl">
-          Ready to experience
+          Prêt à découvrir
           <br />
-          the desert differently?
+          votre signature ?
         </h2>
         <p className="mt-2 text-[#b1a696] text-sm md:text-base max-w-xl">
-          Discover our capsules and find your perfect retreat.
+          Explorez nos créations et trouvez le parfum qui vous ressemble.
         </p>
         <Link
           to="/products"
           className="mt-6 inline-flex items-center gap-2 border border-[#f4efe7] text-[#f4efe7] px-6 md:px-8 py-2.5 md:py-3 rounded-full text-sm md:text-base hover:bg-[#f4efe7] hover:text-[#181717] transition-colors"
         >
-          Discover our capsules
+          Découvrir nos parfums
           <MdArrowOutward className="w-4 h-4" />
         </Link>
       </section>

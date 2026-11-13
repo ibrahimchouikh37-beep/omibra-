@@ -6,9 +6,9 @@ import { useMediaQuery } from "react-responsive";
 import { BsFillPlusCircleFill } from "react-icons/bs";
 
 import "./gallery.css";
-import gbg1 from "../../assets/background1.png";
-import gbg2 from "../../assets/background2.png";
-import gbg3 from "../../assets/background3.png";
+import gbg1 from "../../assets/iko0.jpg";
+import gbg2 from "../../assets/iko0.jpg";
+import gbg3 from "../../assets/iko1.jpg";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -46,13 +46,10 @@ const Gallery = () => {
         // Fond passe du marron clair au noir
         tl.to(root, { backgroundColor: "#181717", duration: 0.1 }, 0);
 
-        // Reset état initial
-        gsap.set(
-          q(".gallery-topText h4, .gallery-topText h3, .gallery-bottomText h3"),
-          { opacity: 1, x: 0 }
-        );
+        // Reset état initial (uniquement les descriptions restantes)
+        gsap.set(q(".gallery-bottomText h3"), { opacity: 1, x: 0 });
 
-        // PHASE 1 — Capsule #1 s'agrandit plein écran
+        // PHASE 1 — Parfum #1 s'agrandit plein écran
         tl.to(q(".gallery-box h3"), { opacity: 0, duration: 0.4 }, 0)
           .to(
             bg,
@@ -71,7 +68,7 @@ const Gallery = () => {
             0
           )
           .from(
-            q(".gallery-background .gallery-topText h4, .gallery-background .gallery-topText h3, .gallery-background .gallery-bottomText h3"),
+            q(".gallery-background .gallery-bottomText h3"),
             { opacity: 0, x: 50, duration: 0.5 },
             0.5
           );
@@ -79,7 +76,7 @@ const Gallery = () => {
         // Pause
         tl.to({}, { duration: 0.3 });
 
-        // PHASE 2 — Capsule #2 arrive
+        // PHASE 2 — Parfum #2 arrive
         tl.to(
           second,
           {
@@ -96,7 +93,7 @@ const Gallery = () => {
             "b"
           )
           .from(
-            q("#gallery-second .gallery-topText h4, #gallery-second .gallery-topText h3, #gallery-second .gallery-bottomText h3"),
+            q("#gallery-second .gallery-bottomText h3"),
             { opacity: 0, x: 50, duration: 0.5 },
             "b+=0.5"
           );
@@ -104,7 +101,7 @@ const Gallery = () => {
         // Pause
         tl.to({}, { duration: 0.3 });
 
-        // PHASE 3 — Capsule #3 arrive
+        // PHASE 3 — Parfum #3 arrive
         tl.to(
           third,
           {
@@ -117,7 +114,7 @@ const Gallery = () => {
           .to(q("#gallery-third img"), { scale: 1, duration: 1 }, "c")
           .to(second, { scale: 0.9, opacity: 0, duration: 1 }, "c")
           .from(
-            q("#gallery-third .gallery-topText h4, #gallery-third .gallery-topText h3, #gallery-third .gallery-bottomText h3"),
+            q("#gallery-third .gallery-bottomText h3"),
             { opacity: 0, x: 50, duration: 0.5 },
             "c+=0.5"
           );
@@ -146,7 +143,7 @@ const Gallery = () => {
   const generateCapsules = (quantity = 6) =>
     Array.from({ length: quantity }, (_, i) => (
       <h3 key={i + 1} style={{ "--index": i + 1 }} className="tracking-tighter">
-        Capsules®
+        Omibra®
       </h3>
     ));
 
@@ -162,17 +159,14 @@ const Gallery = () => {
       </div>
 
       <div className="gallery-background">
-        <img src={gbg1} alt="Classic Capsule" />
-        <div className="gallery-topText">
-          <h4>ClassicCapsule®</h4>
-          <h3>(Scroll)</h3>
-        </div>
+        <img src={gbg1} alt="Ambre Omibra" />
+        <div className="gallery-topText" />
         <div className="gallery-bottomText">
           <div className="w-full flex justify-center items-center gap-0">
             <BsFillPlusCircleFill className="w-8 h-8 text-[#b1a696] shrink-0" />
             <h3>
-              Classic Capsule® boasts refined aesthetics and a modern interior,
-              creating an intimate retreat in a desert landscape
+              Ambre Omibra® dévoile un sillage chaleureux d'ambre et de bois
+              précieux, enveloppant et intemporel.
             </h3>
           </div>
           <div className="relative z-9 w-full max-w-[12.5rem] h-[0.1rem] bg-[#4f4b48]">
@@ -182,17 +176,14 @@ const Gallery = () => {
       </div>
 
       <div id="gallery-second" className="gallery-background2">
-        <img src={gbg2} alt="Terrace Capsule" />
-        <div className="gallery-topText">
-          <h4>Terrace Capsule®</h4>
-          <h3>(Scroll)</h3>
-        </div>
+        <img src={gbg2} alt="Floral Omibra" />
+        <div className="gallery-topText" />
         <div className="gallery-bottomText">
           <div className="w-full flex justify-center items-center gap-0">
             <BsFillPlusCircleFill className="w-8 h-8 text-[#b1a696] shrink-0" />
             <h3>
-              Classic Capsule® boasts refined aesthetics and a modern interior,
-              creating an intimate retreat in a desert landscape
+              Floral Omibra® célèbre un bouquet délicat de fleurs blanches et
+              de musc, lumineux et profondément féminin.
             </h3>
           </div>
           <div className="relative z-9 w-full max-w-[12.5rem] h-[0.1rem] bg-[#4f4b48]">
@@ -202,17 +193,14 @@ const Gallery = () => {
       </div>
 
       <div id="gallery-third" className="gallery-background2">
-        <img src={gbg3} alt="Desert Capsule" />
-        <div className="gallery-topText">
-          <h4>Desert Capsule®</h4>
-          <h3>(Scroll)</h3>
-        </div>
+        <img src={gbg3} alt="Oud Omibra" />
+        <div className="gallery-topText" />
         <div className="gallery-bottomText">
           <div className="w-full flex justify-center items-center gap-0">
             <BsFillPlusCircleFill className="w-8 h-8 text-[#b1a696] shrink-0" />
             <h3>
-              Classic Capsule® boasts refined aesthetics and a modern interior,
-              creating an intimate retreat in a desert landscape
+              Oud Omibra® affirme une signature intense d'oud et d'épices rares,
+              pour une présence magnétique et mystérieuse.
             </h3>
           </div>
           <div className="relative z-9 w-full max-w-[12.5rem] h-[0.1rem] bg-[#4f4b48]">

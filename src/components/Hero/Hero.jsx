@@ -5,8 +5,8 @@ import { useMediaQuery } from "react-responsive";
 import { useRef } from "react";
 
 import smoke from "../../assets/smoke_final.mp4";
-import mobileHeroBg from "../../assets/xdf.jpg";
-import desktopHeroBg from "../../assets/arua.jpg";
+import mobileHeroBg from "../../assets/omihero.jpg";
+import desktopHeroBg from "../../assets/omihero.jpg";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -51,7 +51,7 @@ const Hero = () => {
         <div className="md:hidden absolute inset-0 z-0">
           <img
             src={mobileHeroBg}
-            alt="Capsules mobile background"
+            alt="Omibra Parfums mobile background"
             className="w-full h-full object-cover"
             loading="eager"
             fetchPriority="high"
@@ -74,10 +74,10 @@ const Hero = () => {
         {/* ==== Contenu ==== */}
         <div className="relative z-20 h-full p-4 md:p-6 flex flex-col">
           <h1
-            className="text-[#f4efe7] text-5xl sm:text-6xl md:text-9xl font-bold tracking-wider"
+            className="mt-12 text-[#f4efe7] text-5xl sm:text-6xl md:text-9xl font-bold tracking-wider"
             style={{ textShadow: "2px 2px 4px #aaa" }}
           >
-            Capsules®
+            Omibra®
           </h1>
 
           <div className="mt-auto flex flex-col md:flex-row md:justify-between md:items-end gap-4 pb-6 md:pb-0">
@@ -85,17 +85,17 @@ const Hero = () => {
               className="text-[#f4efe7] text-2xl font-bold tracking-wide leading-snug flex flex-col gap-0.5"
               style={{ textShadow: "2px 2px 4px #000" }}
             >
-              <span>Closer to</span>
-              <span>Nature—Closer</span>
-              <span>to Yourself</span>
+              <span>L'Art du</span>
+              <span>Parfum—</span>
+              <span>l'Émotion</span>
             </h2>
 
             <p
               className="md:w-[22%] w-full text-[#f4efe7] text-xs md:text-sm font-medium tracking-wide md:text-end text-justify leading-relaxed"
               style={{ textShadow: "2px 2px 4px #000" }}
             >
-              Spend unforgettable and remarkable time in the Californian
-              desert with—Capsules.
+              Découvrez des fragrances d'exception, conçues pour révéler votre
+              personnalité et laisser une empreinte inoubliable.
             </p>
           </div>
         </div>

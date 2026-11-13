@@ -6,9 +6,9 @@ import { useGSAP } from "@gsap/react";
 import { MdArrowOutward } from "react-icons/md";
 
 // ⚠️ Deux niveaux en arrière car Products.jsx est dans src/pages/Products/
-import product1 from "../../assets/background1.png";
-import product2 from "../../assets/background2.png";
-import product3 from "../../assets/background3.png";
+import product1 from "../../assets/omi03.jpg";
+import product2 from "../../assets/omi04.jpg";
+import product3 from "../../assets/omi05.jpg";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -18,48 +18,48 @@ const Products = () => {
 
   const products = [
     {
-      id: "classic",
-      name: "Classic Capsule®",
-      tag: "Refined",
-      category: "classic",
+      id: "ambre",
+      name: "Ambre Omibra®",
+      tag: "Boisé",
+      category: "ambre",
       image: product1,
       description:
-        "Refined aesthetics and a modern interior, creating an intimate retreat in a desert landscape.",
-      price: "$340",
-      capacity: "2 personnes",
-      size: "28 m²",
+        "Un sillage chaleureux d'ambre et de bois précieux, enveloppant et intemporel.",
+      price: "120 €",
+      capacity: "50 ml",
+      size: "Eau de Parfum",
     },
     {
-      id: "terrace",
-      name: "Terrace Capsule®",
-      tag: "Panoramic",
-      category: "terrace",
+      id: "floral",
+      name: "Floral Omibra®",
+      tag: "Floral",
+      category: "floral",
       image: product2,
       description:
-        "Spacious terrace overlooking the desert dunes. Wake up to the sunrise from your private deck.",
-      price: "$420",
-      capacity: "3 personnes",
-      size: "35 m²",
+        "Un bouquet délicat de fleurs blanches et de musc, lumineux et profondément féminin.",
+      price: "135 €",
+      capacity: "50 ml",
+      size: "Eau de Parfum",
     },
     {
-      id: "desert",
-      name: "Desert Capsule®",
-      tag: "Isolated",
-      category: "desert",
+      id: "oud",
+      name: "Oud Omibra®",
+      tag: "Oriental",
+      category: "oud",
       image: product3,
       description:
-        "The most secluded capsule, built for total immersion in the silence and beauty of the desert.",
-      price: "$510",
-      capacity: "4 personnes",
-      size: "42 m²",
+        "Une signature intense d'oud et d'épices rares, pour une présence magnétique et mystérieuse.",
+      price: "160 €",
+      capacity: "50 ml",
+      size: "Extrait de Parfum",
     },
   ];
 
   const filters = [
-    { key: "all", label: "All" },
-    { key: "classic", label: "Classic" },
-    { key: "terrace", label: "Terrace" },
-    { key: "desert", label: "Desert" },
+    { key: "all", label: "Tout" },
+    { key: "ambre", label: "Ambre" },
+    { key: "floral", label: "Floral" },
+    { key: "oud", label: "Oud" },
   ];
 
   const filteredProducts = useMemo(
@@ -130,17 +130,17 @@ const Products = () => {
       <section className="w-full min-h-[70vh] md:min-h-dvh flex flex-col justify-center px-5 md:px-8 pt-24 md:pt-32 pb-12 md:pb-20">
         <div className="max-w-5xl">
           <p className="text-[.7rem] font-bold text-[#eae5dd] mb-4">
-            Our Capsules
+            Nos parfums
           </p>
           <h1 className="text-[#f4efe7] text-[3rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[8rem] leading-[0.95] font-medium tracking-tighter">
-            Choose your
+            Choisissez
             <br />
-            desert escape
+            votre fragrance
           </h1>
           <p className="mt-6 md:mt-8 text-[#b1a696] text-sm md:text-base max-w-2xl leading-relaxed">
-            Three unique capsules, each designed to offer a different
-            perspective on the Californian desert. Refined, panoramic, or
-            completely isolated — pick the one that speaks to you.
+            Trois créations uniques, chacune conçue pour révéler une facette
+            différente de votre personnalité. Boisée, florale ou orientale —
+            choisissez celle qui vous ressemble.
           </p>
         </div>
       </section>
@@ -202,13 +202,10 @@ const Products = () => {
                       <span className="text-[#f4efe7] text-sm md:text-base font-medium">
                         {product.price}
                       </span>
-                      <span className="text-[#b1a696] text-[0.65rem] md:text-[0.7rem] ml-1">
-                        / night
-                      </span>
                     </div>
                     <Link
                       to={`/products/${product.id}`}
-                      aria-label={`Discover ${product.name}`}
+                      aria-label={`Découvrir ${product.name}`}
                       className="flex items-center justify-center w-9 h-9 md:w-10 md:h-10 rounded-full bg-[#f4efe7] text-[#181717] hover:scale-110 transition-transform"
                     >
                       <MdArrowOutward className="w-4 h-4 md:w-5 md:h-5" />
@@ -222,7 +219,7 @@ const Products = () => {
         </div>
         {filteredProducts.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-[#b1a696] text-lg">Aucun produit dans cette catégorie.</p>
+            <p className="text-[#b1a696] text-lg">Aucun parfum dans cette catégorie.</p>
           </div>
         )}
       </section>
@@ -230,16 +227,16 @@ const Products = () => {
       {/* CTA final */}
       <section className="w-full px-5 md:px-8 pb-16 md:pb-24 flex flex-col items-center gap-4 text-center">
         <h2 className="text-[#f4efe7] text-[2rem] sm:text-[3rem] md:text-[4rem] leading-tight font-medium tracking-tight max-w-3xl">
-          Not sure which capsule is for you?
+          Vous hésitez encore ?
         </h2>
         <p className="text-[#b1a696] text-sm md:text-base max-w-xl">
-          Our team will help you choose the perfect capsule for your stay.
+          Notre équipe vous aide à trouver la fragrance qui vous correspond.
         </p>
         <Link
           to="/contact"
           className="mt-4 inline-flex items-center gap-2 border border-[#f4efe7] text-[#f4efe7] px-6 md:px-8 py-2.5 md:py-3 rounded-full text-sm md:text-base hover:bg-[#f4efe7] hover:text-[#181717] transition-colors"
         >
-          Contact us
+          Nous contacter
           <MdArrowOutward className="w-4 h-4" />
         </Link>
       </section>

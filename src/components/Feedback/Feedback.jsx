@@ -32,7 +32,7 @@ const Feedback = () => {
     <section className="w-full min-h-dvh p-6 md:p-8 flex flex-col justify-center items-center">
       <div className="w-full text-left">
         <p className="text-[.7rem] font-bold text-[#eae5dd] activities-subtitle text-left">
-          Do people like us?
+          Nos clients en parlent
         </p>
 
         <div className="mt-4 mb-6">
@@ -61,7 +61,7 @@ const Feedback = () => {
           <div className="flex gap-2">
             <button
               onClick={handlePrev}
-              aria-label="Previous review"
+              aria-label="Avis précédent"
               className="border-[1px] p-2 border-[#aaa090] hover:bg-[#aaa090] rounded-full transition-colors"
             >
               <IoMdArrowBack className="text-[#f1ece4] w-5 h-5 md:w-6 md:h-6" />
@@ -69,7 +69,7 @@ const Feedback = () => {
 
             <button
               onClick={handleNext}
-              aria-label="Next review"
+              aria-label="Avis suivant"
               className="border-[1px] p-2 border-[#aaa090] hover:bg-[#aaa090] rounded-full transition-colors"
             >
               <IoMdArrowForward className="text-[#f1ece4] w-5 h-5 md:w-6 md:h-6" />

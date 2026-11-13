@@ -91,21 +91,26 @@ const FooterTitle = () => {
       {/* Header mentions */}
       <div className="w-full flex flex-col md:flex-row md:justify-between items-start md:items-center gap-2 md:gap-0 px-5 md:px-6 pt-6 md:pt-8">
         <p className="text-[#b1a696] text-[0.65rem] md:text-[0.7rem]">
-          Website made by—
-          <a href="#" className="text-[#f2ede5] hover:underline">
-            Moyra.co
+          Site réalisé par—{" "}
+          <a
+            href="https://ibrahimchouikh.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#f2ede5] hover:underline"
+          >
+            Ibrahim Chouikh
           </a>
         </p>
         <p className="text-[#b1a696] text-[0.65rem] md:text-[0.7rem]">
-          This website is using{" "}
+          Ce site utilise des{" "}
           <a href="#" className="text-[#f2ede5] hover:underline">
             cookies
           </a>
         </p>
         <p className="text-[#b1a696] text-[0.65rem] md:text-[0.7rem]">
-          All rights reserved ©{" "}
+          Tous droits réservés ©{" "}
           <a href="#" className="text-[#f2ede5] hover:underline">
-            2025
+            2026
           </a>
         </p>
       </div>
@@ -113,7 +118,7 @@ const FooterTitle = () => {
       {/* Titre géant */}
       <div className="footer-title">
         <h1 className="text-[22vw] sm:text-[20vw] md:text-[18vw] font-bold">
-          Capsules<sub>®</sub>
+          Omibra<sub>®</sub>
         </h1>
       </div>
     </section>

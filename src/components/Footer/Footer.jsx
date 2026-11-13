@@ -5,12 +5,12 @@ import MarqueeText from "../Marquee/MarqueeText";
 
 const Footer = () => {
   const navLinks = [
-    "Welcome",
-    "Introduction",
-    "Houses",
-    "Why Capsules®",
-    "Activites",
-    "Feedback",
+    "Accueil",
+    "À propos",
+    "Collections",
+    "Parfums",
+    "Services",
+    "Contact",
   ];
 
   const socials = [
@@ -24,9 +24,9 @@ const Footer = () => {
     <section className="w-full min-h-dvh px-5 md:px-6 pt-10 md:mt-10 flex flex-col">
       {/* Header */}
       <p className="text-[.7rem] text-[#eae5dd] choose-subtitle">
-        Interested in an amazing adventure?
+        Envie de découvrir votre signature olfactive ?
         <br />
-        Reserve one of our Capsules<span>®</span>
+        Explorez nos parfums Omibra<span>®</span>
       </p>
 
       {/* Marquee */}
@@ -37,22 +37,22 @@ const Footer = () => {
       {/* Bloc texte + navigation */}
       <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 md:gap-10 mt-4 md:mt-14">
         <h3 className="text-[#b1a696] text-base sm:text-lg md:text-2xl leading-relaxed max-w-xl">
-          This website is just the concept
+          Ce site est une création conceptuelle
           <br />
-          work done by—Moyra to showcase
+          réalisée par Ibrahim Chouikh pour présenter
           <br />
-          our capabilities.
+          l'univers de la maison Omibra.
           <br />
           <br />
-          If you would like to outsource a similar
+          Si vous souhaitez confier un projet
           <br />
-          website project—
+          similaire—
           <a
             href="#"
             className="text-[#f4efe7] hover:text-[#c4c1b9] underline transition-colors"
           >
             {" "}
-            contact us.
+            contactez-nous.
           </a>
         </h3>
 
@@ -87,9 +87,9 @@ const Footer = () => {
         {/* Mention */}
         <div>
           <p className="text-[0.75rem] md:text-[0.8rem] text-[#b1a696] text-left md:text-right leading-relaxed">
-            Meet Capsules®—modern and cozy
+            Omibra®—des fragrances d'exception
             <br />
-            houses, in the California desert.
+            entre élégance et émotion.
           </p>
         </div>
       </div>

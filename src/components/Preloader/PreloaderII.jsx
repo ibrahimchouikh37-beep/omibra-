@@ -146,7 +146,7 @@ export default function PreloaderII() {
       <div className="preloader-progress">
         <div className="preloader-progress-bar" />
         <div className="preloader-logo">
-          <h1>Capsule</h1>
+          <h1>Omibra</h1>
         </div>
       </div>
 
@@ -155,9 +155,9 @@ export default function PreloaderII() {
       <div className="preloader-content">
         <div className="preloader-footer">
           <p className="text-sm">
-            Meet Capsules®—modern and cozy
+            Découvrez Omibra®—des parfums
             <br />
-            houses, in the California desert.
+            d'exception, entre élégance et émotion.
           </p>
         </div>
       </div>

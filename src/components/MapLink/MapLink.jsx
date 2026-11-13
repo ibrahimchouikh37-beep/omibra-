@@ -8,13 +8,13 @@ const MapLink = () => {
     <section className="w-screen min-h-[90dvh] bg-[#181717] flex flex-col justify-center items-center text-center px-6">
       <div>
         <p className="text-[0.7rem] font-bold text-[#a79c8d] choose-subtitle">
-          Closer than you think
+          Plus proche que vous ne le pensez
         </p>
 
         <h1 className="text-[8vw] sm:text-[6vw] md:text-[5vw] leading-tight tracking-tight mt-5 text-[#f4efe7]">
-          Our Capsules® are located
+          Nos boutiques Omibra® vous accueillent
           <br />
-          near Los Angeles with easy
+          au cœur des plus belles villes
         </h1>
       </div>
 
@@ -33,7 +33,7 @@ const MapLink = () => {
         }}
         className="text-[#b1a696] text-[8vw] sm:text-[6vw] md:text-[5vw] underline hover:text-[#f4efe7] mt-2"
       >
-        access by road.
+        pour une expérience olfactive unique.
       </a>
     </section>
   );
