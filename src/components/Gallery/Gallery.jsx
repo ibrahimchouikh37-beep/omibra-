@@ -8,7 +8,7 @@ import { BsFillPlusCircleFill } from "react-icons/bs";
 import "./gallery.css";
 import gbg1 from "../../assets/iko0.jpg";
 import gbg2 from "../../assets/iko0.jpg";
-import gbg3 from "../../assets/iko1.jpg";
+import gbg3 from "../../assets/iko0.jpg";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 

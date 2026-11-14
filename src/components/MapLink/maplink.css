@@ -1,0 +1,21 @@
+/* Soulignement dessiné par GSAP via --u (0% → 100%).
+   Valeur par défaut 100% : si l'animation est désactivée, le lien reste souligné. */
+.map-link {
+  --u: 100%;
+  color: #b1a696;
+  text-decoration: none;
+  background: linear-gradient(currentColor, currentColor) 0 100% / var(--u) 1px no-repeat;
+  padding-bottom: 0.08em;
+  transition: color 0.35s ease, background-size 0.35s ease;
+}
+
+.map-link:hover,
+.map-link:focus-visible {
+  color: #f4efe7;
+  background-size: var(--u) 3px;
+}
+
+.map-link:focus-visible {
+  outline: 2px solid #f4efe7;
+  outline-offset: 6px;
+}
