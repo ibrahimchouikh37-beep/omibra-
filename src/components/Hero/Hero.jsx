@@ -73,13 +73,6 @@ const Hero = () => {
 
         {/* ==== Contenu ==== */}
         <div className="relative z-20 h-full p-4 md:p-6 flex flex-col">
-          <h1
-            className="mt-12 text-[#f4efe7] text-5xl sm:text-6xl md:text-9xl font-bold tracking-wider"
-            style={{ textShadow: "2px 2px 4px #aaa" }}
-          >
-            Omibra®
-          </h1>
-
           <div className="mt-auto flex flex-col md:flex-row md:justify-between md:items-end gap-4 pb-6 md:pb-0">
             <h2
               className="text-[#f4efe7] text-2xl font-bold tracking-wide leading-snug flex flex-col gap-0.5"

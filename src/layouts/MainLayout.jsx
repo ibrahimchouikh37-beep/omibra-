@@ -6,7 +6,6 @@ import { useGSAP } from "@gsap/react";
 
 import Navbar from "../components/Navbar/Navbar";
 import PreloaderII from "../components/Preloader/PreloaderII";
-import ReserveBtn from "../components/Buttons/ReserveBtn";
 import Logo from "../components/Buttons/Logo";
 import Footer from "../components/Footer/Footer";
 import FooterTitle from "../components/Footer/FooterTitle";
@@ -16,34 +15,33 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 const MainLayout = () => {
   const wrapperRef = useRef(null);
 
- useGSAP(
-  () => {
-    // Attendre que tout soit chargé AVANT de refresh
-    const handleLoad = () => {
-      // Délai pour laisser le Preloader finir
-      setTimeout(() => {
-        ScrollTrigger.refresh();
-      }, 100);
-    };
+  useGSAP(
+    () => {
+      // Attendre que tout soit chargé AVANT de refresh
+      const handleLoad = () => {
+        // Délai pour laisser le Preloader finir
+        setTimeout(() => {
+          ScrollTrigger.refresh();
+        }, 100);
+      };
 
-    if (document.readyState === "complete") {
-      handleLoad();
-    } else {
-      window.addEventListener("load", handleLoad, { once: true });
-    }
+      if (document.readyState === "complete") {
+        handleLoad();
+      } else {
+        window.addEventListener("load", handleLoad, { once: true });
+      }
 
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
-  },
-  { scope: wrapperRef, revertOnUpdate: true }
-);
+      return () => {
+        window.removeEventListener("load", handleLoad);
+      };
+    },
+    { scope: wrapperRef, revertOnUpdate: true }
+  );
 
   return (
     <>
       <PreloaderII />
       <Logo />
-      <ReserveBtn />
       <Navbar />
 
       <div id="smooth-wrapper" ref={wrapperRef}>
